@@ -1,6 +1,5 @@
 #[cfg(test)]
 mod tests {
-    use std::collections::{self, btree_map::IterMut};
 
     #[test]
     fn integer_test() {
