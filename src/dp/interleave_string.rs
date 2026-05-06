@@ -48,20 +48,28 @@ impl Solution {
         if n1 + n2 != n3 {
             return false;
         }
-        let (s1_bytes, s2_bytes, s3_bytes) = (s1.as_bytes(), s2.as_bytes(), s3.as_bytes());
+        let (s1, s2, s3) = (s1.as_bytes(), s2.as_bytes(), s3.as_bytes());
         let mut dp = vec![vec![false; n2 + 1]; n1 + 1];
         dp[0][0] = true;
         for i in 1..=n1 {
-            dp[i][0] = s1_bytes[i - 1] == s3_bytes[i - 1] && dp[i - 1][0];
+            if s1[i - 1] == s3[i - 1] {
+                dp[i][0] = true;
+            } else {
+                break;
+            }
         }
         for j in 1..=n2 {
-            dp[0][j] = s2_bytes[j - 1] == s3_bytes[j - 1] && dp[0][j - 1];
+            if s2[j - 1] == s3[j - 1] {
+                dp[0][j] = true;
+            } else {
+                break;
+            }
         }
         for i in 1..=n1 {
             for j in 1..=n2 {
                 let k = i + j;
-                dp[i][j] = (s1_bytes[i - 1] == s3_bytes[k - 1] && dp[i - 1][j])
-                    || (s2_bytes[j - 1] == s3_bytes[k - 1] && dp[i][j - 1]);
+                dp[i][j] = (s1[i - 1] == s3[k - 1] && dp[i - 1][j])
+                    || (s2[j - 1] == s3[k - 1] && dp[i][j - 1]);
             }
         }
         dp[n1][n2]
