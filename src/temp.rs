@@ -1,3 +1,4 @@
+/// []()
 struct Solution;
 
 impl Solution {
@@ -11,12 +12,5 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test1() {
-        let text1 = String::from("value1");
-        let text2 = String::from("value2");
-        assert_eq!(Solution::main(text1, text2), 0);
-    }
-
-    #[test]
-    fn test2() {}
+    fn test1() {}
 }

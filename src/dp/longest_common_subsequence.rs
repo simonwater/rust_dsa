@@ -1,3 +1,5 @@
+/// [1143. 最长公共子序列](https://leetcode.cn/problems/longest-common-subsequence/)
+
 pub fn longest_common_subsequence(text1: String, text2: String) -> i32 {
     let (n1, n2) = (text1.len(), text2.len());
     let mut memo = vec![vec![None; n2]; n1];
