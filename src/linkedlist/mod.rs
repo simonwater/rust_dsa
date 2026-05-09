@@ -4,6 +4,8 @@ pub mod lru_cache;
 pub mod merge_two_sorted_lists;
 pub mod middle_of_the_linked_list;
 pub mod palindrome_linked_list;
+pub mod remove_nth_from_end;
 pub mod reverse_linked_list;
+pub mod swap_pairs;
 
 pub use list_node::ListNode;
