@@ -45,6 +45,28 @@ impl Solution {
         cur.next = if l1.is_none() { l2 } else { l1 };
         dumy.next
     }
+
+    pub fn merge_two_lists_iter1(
+        mut l1: Option<Box<ListNode>>,
+        mut l2: Option<Box<ListNode>>,
+    ) -> Option<Box<ListNode>> {
+        let mut dumy = ListNode::new(0);
+        let mut cur = &mut dumy;
+        while l1.is_some() && l2.is_some() {
+            if l1.as_ref().unwrap().val <= l2.as_ref().unwrap().val {
+                let next = l1.as_mut().unwrap().next.take();
+                cur.next = l1;
+                l1 = next;
+            } else {
+                let next = l2.as_mut().unwrap().next.take();
+                cur.next = l2;
+                l2 = next;
+            }
+            cur = cur.next.as_mut().unwrap();
+        }
+        cur.next = if l1.is_none() { l2 } else { l1 };
+        dumy.next
+    }
 }
 
 #[cfg(test)]
