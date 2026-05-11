@@ -30,6 +30,15 @@ impl ListNode {
         }
         dumy.next
     }
+
+    pub fn print(&mut self) {
+        let mut cur = Some(self);
+        while let Some(node) = cur {
+            print!("{} ", node.val);
+            cur = node.next.as_deref_mut();
+        }
+        println!();
+    }
 }
 
 pub fn print_list(mut list: Option<Box<ListNode>>) {

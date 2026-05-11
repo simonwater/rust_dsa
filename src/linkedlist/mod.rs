@@ -8,6 +8,7 @@ pub mod odd_even_list;
 pub mod palindrome_linked_list;
 pub mod remove_nth_from_end;
 pub mod reverse_linked_list;
+pub mod sort_list;
 pub mod swap_pairs;
 
 pub use list_node::ListNode;
