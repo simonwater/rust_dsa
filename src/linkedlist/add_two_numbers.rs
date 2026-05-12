@@ -1,4 +1,4 @@
-/// [328. 奇偶链表](https://leetcode.cn/problems/odd-even-linked-list/description/)
+/// [2. 两数相加](https://leetcode.cn/problems/add-two-numbers/description/)
 use crate::linkedlist::ListNode;
 
 struct Solution;
