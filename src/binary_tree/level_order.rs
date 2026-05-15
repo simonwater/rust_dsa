@@ -24,8 +24,6 @@ impl Solution {
                         }
                         if let Some(right) = borrow.right.as_ref() {
                             q.push_back(Rc::clone(right));
-                            let test = borrow.left.as_deref();
-                            test.unwrap();
                         }
                     }
                 }
