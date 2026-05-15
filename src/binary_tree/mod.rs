@@ -9,6 +9,7 @@ pub mod max_depth;
 pub mod merge_trees;
 pub mod path_sum;
 pub mod prune_tree;
+pub mod sum_numbers;
 pub mod tree_node;
 
 pub use tree_node::TreeNode;
