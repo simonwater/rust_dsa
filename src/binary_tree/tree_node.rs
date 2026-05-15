@@ -51,24 +51,22 @@ impl TreeNode {
 
 // --- 宏定义 ---
 #[macro_export]
+#[macro_export]
 macro_rules! tree {
-    // 匹配空
     () => { None };
-    // 匹配列表并转换成构造函数能接受的格式
-    ($($val:tt),*) => {
+    // 使用 expr 匹配所有的项
+    ($($val:expr),*) => {
         {
-            let mut v = Vec::new();
+            // 巧用宏的“字符串化”或直接判断
+            let mut v = Vec::<Option<i32>>::new();
             $(
-                // 将 null 转换为 None，数字转换为 Some
-                v.push(tree!(@inner $val));
+                // 这里利用一个简单的闭包或辅助逻辑来转换 null
+                // 假设我们把 null 定义为一个特殊的常量或直接在数组里处理
+                v.push(stringify!($val).parse::<i32>().ok());
             )*
             TreeNode::from_vec(v)
         }
     };
-    // 内部辅助：处理 null 关键字
-    (@inner null) => { None };
-    // 内部辅助：处理表达式（数字）
-    (@inner $e:expr) => { Some($e) };
 }
 
 #[cfg(test)]

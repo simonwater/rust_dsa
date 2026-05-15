@@ -7,6 +7,8 @@ pub mod is_subtree;
 pub mod is_symmetric;
 pub mod max_depth;
 pub mod merge_trees;
+pub mod path_sum;
+pub mod prune_tree;
 pub mod tree_node;
 
 pub use tree_node::TreeNode;
