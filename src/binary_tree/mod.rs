@@ -5,6 +5,7 @@ pub mod is_balanced;
 pub mod is_same_tree;
 pub mod is_subtree;
 pub mod is_symmetric;
+pub mod level_order;
 pub mod max_depth;
 pub mod merge_trees;
 pub mod path_sum;
