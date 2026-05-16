@@ -1,4 +1,5 @@
 pub mod array;
+pub mod backtrack;
 pub mod binary;
 pub mod binary_tree;
 pub mod dp;
