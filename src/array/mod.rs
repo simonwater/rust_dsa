@@ -1,4 +1,5 @@
 pub mod contains_duplicate;
+pub mod interval;
 pub mod majority_element;
 pub mod move_zeroes;
 pub mod product_except_self;
