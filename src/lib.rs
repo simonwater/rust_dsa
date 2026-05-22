@@ -1,6 +1,7 @@
 pub mod array;
 pub mod backtrack;
 pub mod binary;
+pub mod binary_search;
 pub mod binary_tree;
 pub mod dp;
 pub mod hash;

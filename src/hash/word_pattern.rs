@@ -3,6 +3,9 @@ struct Solution;
 
 use std::collections::HashMap;
 impl Solution {
+    /// 哈希表：
+    /// 1. 字符用u8不仅消灭了 UTF-8 字符解码的 CPU 开销，还让哈希表的 Key 变成了最轻量的类型
+    /// 2. 使用字符串切片没有对输入的 s 进行二次堆内存切片和复制。所有的单词全是通过指针直接悬挂在 s 上
     pub fn word_pattern(pattern: String, s: String) -> bool {
         let p_bytes = pattern.as_bytes();
         let mut words = s.split_whitespace();
