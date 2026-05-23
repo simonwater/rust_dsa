@@ -7,4 +7,5 @@ pub mod dp;
 pub mod hash;
 pub mod linkedlist;
 pub mod rust;
+pub mod stack;
 pub mod string;
