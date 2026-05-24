@@ -5,6 +5,7 @@ pub mod binary_search;
 pub mod binary_tree;
 pub mod dp;
 pub mod hash;
+pub mod heap;
 pub mod linkedlist;
 pub mod rust;
 pub mod stack;

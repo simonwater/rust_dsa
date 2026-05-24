@@ -1,3 +1,4 @@
+/// [232. 用栈实现队列](https://leetcode.cn/problems/implement-queue-using-stacks/description/)
 struct MyQueue {
     stack1: Vec<i32>,
     stack2: Vec<i32>,
