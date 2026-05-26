@@ -12,5 +12,6 @@ pub mod path_sum;
 pub mod prune_tree;
 pub mod sum_numbers;
 pub mod tree_node;
+pub mod zigzag_level_order;
 
 pub use tree_node::TreeNode;
