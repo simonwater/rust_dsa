@@ -47,21 +47,21 @@ mod tests {
     #[test]
     fn test1() {
         let root = tree![3, 5, 1, 6, 2, 0, 8, null, null, 7, 4];
-        let node1 = tree![5];
-        let node2 = tree![1];
-        let ans = tree![3];
+        let node1 = TreeNode::find_node(&root, 5);
+        let node2 = TreeNode::find_node(&root, 1);
+        let ans = TreeNode::find_node(&root, 3);
         assert_eq!(Solution::lowest_common_ancestor(root, node1, node2), ans);
 
         let root = tree![3, 5, 1, 6, 2, 0, 8, null, null, 7, 4];
-        let node1 = tree![5];
-        let node2 = tree![4];
-        let ans = tree![5];
+        let node1 = TreeNode::find_node(&root, 5);
+        let node2 = TreeNode::find_node(&root, 4);
+        let ans = TreeNode::find_node(&root, 5);
         assert_eq!(Solution::lowest_common_ancestor(root, node1, node2), ans);
 
         let root = tree![1, 2];
-        let node1 = tree![1];
-        let node2 = tree![2];
-        let ans = tree![1];
+        let node1 = TreeNode::find_node(&root, 1);
+        let node2 = TreeNode::find_node(&root, 2);
+        let ans = TreeNode::find_node(&root, 1);
         assert_eq!(Solution::lowest_common_ancestor(root, node1, node2), ans);
     }
 }

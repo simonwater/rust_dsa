@@ -47,10 +47,21 @@ impl TreeNode {
         }
         Some(root)
     }
+
+    pub fn find_node(root: &Option<Rc<RefCell<Self>>>, val: i32) -> Option<Rc<RefCell<Self>>> {
+        if let Some(root_node) = root {
+            let borrow = root_node.borrow();
+            if borrow.val == val {
+                return Some(Rc::clone(root_node));
+            }
+            Self::find_node(&borrow.left, val).or_else(|| Self::find_node(&borrow.right, val))
+        } else {
+            None
+        }
+    }
 }
 
 // --- 宏定义 ---
-#[macro_export]
 #[macro_export]
 macro_rules! tree {
     () => { None };
@@ -80,5 +91,17 @@ mod tests {
             tree![2, 1, 3, null, 4, null, 7],
             tree![2, 1, 3, null, 4, null, 7]
         );
+
+        let tree = tree![2, 1, 3, null, 4, null, 7];
+        let node = TreeNode::find_node(&tree, 2);
+        assert_eq!(node.unwrap().borrow().val, 2);
+
+        let tree = tree![2, 1, 3, null, 4, null, 7];
+        let node = TreeNode::find_node(&tree, 4);
+        assert_eq!(node.unwrap().borrow().val, 4);
+
+        let tree = tree![2, 1, 3, null, 4, null, 7];
+        let node = TreeNode::find_node(&tree, 0);
+        assert_eq!(node, None);
     }
 }
