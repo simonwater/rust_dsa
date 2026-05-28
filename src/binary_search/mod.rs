@@ -3,5 +3,6 @@ pub mod k_closest_elements;
 pub mod rotated_sorted_array;
 pub mod search;
 pub mod search_insert;
+pub mod search_matrix;
 pub mod search_range;
 pub mod time_map;
