@@ -9,6 +9,7 @@ pub mod palindrome_linked_list;
 pub mod partition_list;
 pub mod remove_nth_from_end;
 pub mod reorder_list;
+pub mod reverse_k_group;
 pub mod reverse_linked_list;
 pub mod rotate_list;
 pub mod sort_list;
