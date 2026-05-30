@@ -5,8 +5,8 @@ use std::rc::Rc;
 /// [863. 二叉树中所有距离为 K 的结点](https://leetcode.cn/problems/all-nodes-distance-k-in-binary-tree/)
 struct Solution;
 
-use std::collections::HashMap;
 use std::collections::VecDeque;
+
 impl Solution {
     pub fn distance_k(
         root: Option<Rc<RefCell<TreeNode>>>,
@@ -16,7 +16,9 @@ impl Solution {
         if root.is_none() || target.is_none() {
             return Vec::new();
         }
-        let mut parents: HashMap<i32, Rc<RefCell<TreeNode>>> = HashMap::with_capacity(16);
+
+        const INI: Option<Rc<RefCell<TreeNode>>> = None;
+        let mut parents = [INI; 501];
         Self::init_parents(&root, &None, &mut parents);
 
         let mut visited = [false; 501];
@@ -31,25 +33,13 @@ impl Solution {
             if dist == k {
                 ans.push(node.val);
             } else {
-                if let Some(left_rc) = &node.left {
-                    let left_val = left_rc.borrow().val;
-                    if !visited[left_val as usize] {
-                        visited[left_val as usize] = true;
-                        q.push_back((Rc::clone(left_rc), dist + 1));
-                    }
-                }
-                if let Some(right_rc) = &node.right {
-                    let right_val = right_rc.borrow().val;
-                    if !visited[right_val as usize] {
-                        visited[right_val as usize] = true;
-                        q.push_back((Rc::clone(right_rc), dist + 1));
-                    }
-                }
-                if let Some(parent_rc) = parents.get(&node.val) {
-                    let parent_val = parent_rc.borrow().val;
-                    if !visited[parent_val as usize] {
-                        visited[parent_val as usize] = true;
-                        q.push_back((Rc::clone(parent_rc), dist + 1));
+                for rc_opt in [&node.left, &node.right, &parents[node.val as usize]] {
+                    if let Some(rc) = rc_opt {
+                        let val = rc.borrow().val;
+                        if !visited[val as usize] {
+                            visited[val as usize] = true;
+                            q.push_back((Rc::clone(rc), dist + 1));
+                        }
                     }
                 }
             }
@@ -61,12 +51,12 @@ impl Solution {
     fn init_parents(
         root: &Option<Rc<RefCell<TreeNode>>>,
         parent: &Option<Rc<RefCell<TreeNode>>>,
-        parents: &mut HashMap<i32, Rc<RefCell<TreeNode>>>,
+        parents: &mut [Option<Rc<RefCell<TreeNode>>>],
     ) {
         if let Some(root_rc) = root {
             let node = root_rc.borrow();
             if let Some(parent_rc) = parent {
-                parents.insert(node.val, Rc::clone(parent_rc));
+                parents[node.val as usize] = Some(Rc::clone(parent_rc));
             }
 
             Self::init_parents(&node.left, root, parents);
