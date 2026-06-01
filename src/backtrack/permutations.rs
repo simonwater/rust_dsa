@@ -50,6 +50,30 @@ impl Solution2 {
     }
 }
 
+/// 原地交换法，通过交换来枚举每个位置所有可能的数字
+struct Solution3;
+impl Solution3 {
+    pub fn permute(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
+        let mut ans = Vec::with_capacity(10);
+        Self::dfs(0, &mut nums, &mut ans);
+        ans
+    }
+
+    fn dfs(start: usize, nums: &mut [i32], ans: &mut Vec<Vec<i32>>) {
+        if start == nums.len() {
+            ans.push(nums.to_vec());
+        }
+        for i in start..nums.len() {
+            // 从start到n - 1每个位置上的数字都轮流来填充位置start
+            nums.swap(start, i);
+            // start及其左边的部分已经固定，接下来让剩余的数字递归决定位置start + 1.
+            Self::dfs(start + 1, nums, ans);
+            // 恢复现场，准备让一下个数来填充
+            nums.swap(start, i);
+        }
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
