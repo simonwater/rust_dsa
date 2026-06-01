@@ -2,7 +2,6 @@
 struct Solution;
 use std::collections::VecDeque;
 
-use crate::graph::node;
 /// 拓扑排序
 impl Solution {
     pub fn can_finish(num_courses: i32, prerequisites: Vec<Vec<i32>>) -> bool {
@@ -33,6 +32,50 @@ impl Solution {
             }
         }
         out_cnt == num_courses
+    }
+}
+
+struct Solution2;
+
+impl Solution2 {
+    pub fn can_finish(num_courses: i32, prerequisites: Vec<Vec<i32>>) -> bool {
+        let num_courses = num_courses as usize;
+        let mut g: Vec<Vec<usize>> = vec![Vec::with_capacity(10); num_courses];
+        for e in prerequisites {
+            let u = e[1] as usize;
+            let v = e[0] as usize;
+            g[u].push(v);
+        }
+        // 0: 未访问，1:访问中，2:已访问
+        let mut states = vec![0; num_courses];
+        for node in 0..num_courses {
+            if states[node] == 0 {
+                if !Self::dfs(node, &g, &mut states) {
+                    return false;
+                }
+            }
+        }
+        true
+    }
+
+    fn dfs(node: usize, g: &Vec<Vec<usize>>, states: &mut [i32]) -> bool {
+        match states[node] {
+            // 访问中
+            1 => false,
+            // 已访问
+            2 => true,
+            // 未访问
+            _ => {
+                states[node] = 1;
+                for &next in &g[node] {
+                    if !Self::dfs(next, g, states) {
+                        return false;
+                    }
+                }
+                states[node] = 2;
+                true
+            }
+        }
     }
 }
 
