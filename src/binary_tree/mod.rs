@@ -14,6 +14,7 @@ pub mod merge_trees;
 pub mod path_sum;
 pub mod prune_tree;
 pub mod right_side_view;
+pub mod serialize_and_deserialize;
 pub mod sum_numbers;
 pub mod tree_node;
 pub mod width_of_binary_tree;
