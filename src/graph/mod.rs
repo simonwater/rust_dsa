@@ -1,4 +1,5 @@
 pub mod flood_fill;
+pub mod max_area_of_island;
 pub mod node;
 pub mod num_islands;
 pub mod rotting_oranges;
