@@ -1,3 +1,4 @@
+pub mod combine_n_k;
 pub mod permutations;
 pub mod permutations_ii;
 pub mod subsets;
