@@ -1,4 +1,5 @@
 /// [684. 冗余连接](https://leetcode.cn/problems/redundant-connection/)
+/// 并查集，路径压缩
 struct Solution;
 
 impl Solution {
