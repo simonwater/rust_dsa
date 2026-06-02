@@ -10,6 +10,7 @@ pub mod is_symmetric;
 pub mod level_order;
 pub mod lowest_common_ancestor;
 pub mod max_depth;
+pub mod max_path_sum;
 pub mod merge_trees;
 pub mod path_sum;
 pub mod prune_tree;
