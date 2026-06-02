@@ -1,6 +1,7 @@
 /// [46. 全排列](https://leetcode.cn/problems/permutations/)
 struct Solution;
 
+/// 枚举每个位置的所有可能填充数字
 impl Solution {
     pub fn permute(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut ans = Vec::with_capacity(10);
@@ -26,7 +27,7 @@ impl Solution {
 
 struct Solution2;
 
-// 用标志位判断是否已经用过，节约空间
+/// 用标志位判断是否已经用过，节约空间
 impl Solution2 {
     pub fn permute(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut ans = Vec::with_capacity(10);
