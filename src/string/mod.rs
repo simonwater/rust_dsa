@@ -1,3 +1,4 @@
+pub mod character_replacement;
 pub mod find_anagrams;
 pub mod group_anagrams;
 pub mod length_of_longest_substring;
