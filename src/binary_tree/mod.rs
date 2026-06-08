@@ -13,6 +13,7 @@ pub mod lowest_common_ancestor;
 pub mod max_depth;
 pub mod max_path_sum;
 pub mod merge_trees;
+pub mod my_calendar_i;
 pub mod path_sum;
 pub mod populating_next_right_pointers;
 pub mod prune_tree;
