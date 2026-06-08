@@ -38,10 +38,10 @@ impl Solution {
                     ops.pop(); // 弹出'(' 
                     s_bytes.next();
                 }
-                b'+' | b'-' | b'*' | b'/' => {
+                b'+' | b'-' | b'*' | b'/' | b'^' => {
                     // 执行计算
                     while let Some(&prev) = ops.last() {
-                        if prev != b'(' && Self::priority(prev) >= Self::priority(c) {
+                        if prev != b'(' && Self::priority(prev).1 >= Self::priority(c).0 {
                             Self::calc(&mut ops, &mut nums);
                         } else {
                             break;
@@ -69,14 +69,16 @@ impl Solution {
             b'-' => nums.push(a - b),
             b'*' => nums.push(a * b),
             b'/' => nums.push(a / b),
+            b'^' => nums.push(a.pow(b as u32)),
             _ => unreachable!(),
         }
     }
 
-    fn priority(op: u8) -> i32 {
+    fn priority(op: u8) -> (i32, i32) {
         match op {
-            b'+' | b'-' => 10,
-            b'*' | b'/' => 20,
+            b'+' | b'-' => (10, 15),
+            b'*' | b'/' => (20, 25),
+            b'^' => (35, 30),
             _ => unreachable!(),
         }
     }
@@ -102,5 +104,11 @@ mod tests {
 
         let s = String::from("1+((2))");
         assert_eq!(Solution::calculate(s), 3);
+
+        let s = String::from("1+2*3^2");
+        assert_eq!(Solution::calculate(s), 19);
+
+        let s = String::from("1 + 3 * 2^3^2");
+        assert_eq!(Solution::calculate(s), 1537);
     }
 }
