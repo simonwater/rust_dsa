@@ -9,3 +9,4 @@ pub mod redundant_connection;
 pub mod rotting_oranges;
 pub mod surrounded_regions;
 pub mod update_matrix;
+pub mod word_search;
