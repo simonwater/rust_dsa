@@ -1,37 +1,47 @@
+/// [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
 struct Solution;
 
+use rand::{Rng, rngs::ThreadRng};
 impl Solution {
-    // 快速排序
-    pub fn sort(mut nums: Vec<i32>) -> Vec<i32> {
-        if nums.is_empty() {
-            return nums;
+    // 快速选择
+    pub fn find_kth_largest(mut nums: Vec<i32>, k: i32) -> i32 {
+        if k <= 0 || k as usize > nums.len() {
+            unreachable!();
         }
         let n = nums.len();
-        Self::qsort(&mut nums, 0, n - 1);
-        nums
+        let k = n - (k as usize);
+        let mut rng = rand::thread_rng(); // 只构造一次
+        Self::qselect(&mut nums, 0, n - 1, k, &mut rng)
     }
 
-    fn qsort(nums: &mut [i32], start: usize, end: usize) {
+    fn qselect(nums: &mut [i32], start: usize, end: usize, k: usize, rng: &mut ThreadRng) -> i32 {
         if start >= end {
-            return;
+            return nums[start];
         }
-        let p = Self::partition(nums, start, end);
-        if p > 0 {
-            Self::qsort(nums, start, p - 1);
-        }
-        Self::qsort(nums, p + 1, end);
-    }
-
-    fn partition(nums: &mut [i32], start: usize, end: usize) -> usize {
-        let pivot = nums[end];
+        let idx: usize = rng.gen_range(start..=end);
+        let pivot = nums[idx];
+        let mut left = start;
         let mut i = start;
-        for j in start..=end {
-            if nums[j] <= pivot {
-                nums.swap(i, j);
+        let mut right = end;
+        while i <= right {
+            if nums[i] == pivot {
                 i += 1;
+            } else if nums[i] < pivot {
+                nums.swap(left, i);
+                left += 1;
+                i += 1;
+            } else {
+                nums.swap(i, right);
+                right -= 1;
             }
         }
-        i - 1
+        if k < left {
+            Self::qselect(nums, start, left - 1, k, rng)
+        } else if k > right {
+            Self::qselect(nums, right + 1, end, k, rng)
+        } else {
+            pivot
+        }
     }
 }
 
@@ -41,24 +51,19 @@ mod tests {
 
     #[test]
     fn test1() {
-        let nums = vec![4, 2, 1, 5, 6, 3];
-        let ans = vec![1, 2, 3, 4, 5, 6];
-        assert_eq!(Solution::sort(nums), ans);
+        let nums = vec![3, 2, 1, 5, 6, 4];
+        let k = 2;
+        let ans = 5;
+        assert_eq!(Solution::find_kth_largest(nums, k), ans);
 
         let nums = vec![3, 2, 3, 1, 2, 4, 5, 5, 6];
-        let ans = vec![1, 2, 2, 3, 3, 4, 5, 5, 6];
-        assert_eq!(Solution::sort(nums), ans);
-
-        let nums = vec![2, 1];
-        let ans = vec![1, 2];
-        assert_eq!(Solution::sort(nums), ans);
+        let k = 4;
+        let ans = 4;
+        assert_eq!(Solution::find_kth_largest(nums, k), ans);
 
         let nums = vec![1];
-        let ans = vec![1];
-        assert_eq!(Solution::sort(nums), ans);
-
-        let nums = vec![1, 1, 1];
-        let ans = vec![1, 1, 1];
-        assert_eq!(Solution::sort(nums), ans);
+        let k = 1;
+        let ans = 1;
+        assert_eq!(Solution::find_kth_largest(nums, k), ans);
     }
 }
