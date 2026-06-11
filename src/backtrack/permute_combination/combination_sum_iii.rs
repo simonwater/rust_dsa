@@ -16,7 +16,9 @@ impl Solution {
             ans.push(path.clone());
             return;
         }
-        if num == 10 || num > target || path.len() >= k {
+        // 剪枝
+        let left_num_cnt = (10 - num) as usize;
+        if num == 10 || num > target || path.len() >= k || path.len() + left_num_cnt < k {
             return;
         }
         path.push(num);
@@ -44,7 +46,9 @@ impl Solution2 {
             ans.push(path.to_vec());
             return;
         }
-        if start == 10 || start > target || pos >= path.len() {
+        // 剪枝
+        let left_num_cnt = 10 - (start as usize);
+        if start == 10 || start > target || pos >= path.len() || pos + left_num_cnt < path.len() {
             return;
         }
         for num in start..10 {
