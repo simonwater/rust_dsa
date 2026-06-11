@@ -43,6 +43,8 @@ impl Solution2 {
         path.push(nums[i]);
         Self::dfs(i + 1, nums, path, ans);
         path.pop();
+        // 对于当前层，也就是path现在要填充的位置j，使用数字nums[i]的情况已经在刚才处理完
+        // 不选nums[i]的分支进入下一层后，如果遇到相同数字，继续往j处填充，就会重复处理。
         while i < nums.len() - 1 && nums[i] == nums[i + 1] {
             i += 1;
         }
