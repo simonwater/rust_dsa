@@ -15,4 +15,5 @@ pub mod rotting_oranges;
 pub mod shortest_path_binary_matrix;
 pub mod surrounded_regions;
 pub mod update_matrix;
+pub mod word_ladder;
 pub mod word_search;
