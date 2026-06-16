@@ -6,9 +6,7 @@ use std::rc::Rc;
 struct Solution;
 
 impl Solution {
-    pub fn main(root1: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
-        root1
-    }
+    //
 }
 
 #[cfg(test)]
