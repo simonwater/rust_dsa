@@ -15,6 +15,7 @@ pub mod reverse_k_group;
 pub mod reverse_linked_list;
 pub mod rotate_list;
 pub mod sort_list;
+pub mod split_list_to_parts;
 pub mod swap_pairs;
 
 pub use list_node::ListNode;
