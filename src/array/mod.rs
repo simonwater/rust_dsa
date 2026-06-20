@@ -14,4 +14,5 @@ pub mod stock_max_profit;
 pub mod subarray_sum_equals_k;
 pub mod three_sum;
 pub mod three_sum_closest;
+pub mod trap;
 pub mod two_sum;
