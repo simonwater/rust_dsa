@@ -1,6 +1,7 @@
 pub mod binary_search_tree;
 pub mod build_tree;
 pub mod complete_binary_tree_inserter;
+pub mod construct_quad_tree;
 pub mod count_nodes;
 pub mod diameter_of_binary_tree;
 pub mod distance_k_in_tree;
