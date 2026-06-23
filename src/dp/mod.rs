@@ -8,6 +8,7 @@ pub mod edit_distance;
 pub mod house_robber_i_ii;
 pub mod house_robber_iii;
 pub mod interleave_string;
+pub mod jump_game;
 pub mod length_of_lis;
 pub mod longest_common_subsequence;
 pub mod longest_palindrome;
