@@ -1,6 +1,7 @@
 pub mod all_paths_source_target;
 pub mod bipartite_graph;
 pub mod bus_routes;
+pub mod count_paths;
 pub mod course_schedule;
 pub mod course_schedule_ii;
 pub mod evaluate_division;
