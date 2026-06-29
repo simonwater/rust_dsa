@@ -47,6 +47,29 @@ pub fn dp(text1: String, text2: String) -> i32 {
     return dp[n1][n2];
 }
 
+/// 空间优化，二维数组压缩成一维。
+/// 对二维dp数组做更新时，更新值只取决于当前值左、上、左上三个位置的值
+struct Solution;
+impl Solution {
+    pub fn longest_common_subsequence(text1: String, text2: String) -> i32 {
+        let n = text2.len();
+        let mut dp = vec![0; n + 1];
+        for &c1 in text1.as_bytes() {
+            let mut left_top = 0;
+            for (i, &c2) in text2.as_bytes().iter().enumerate() {
+                let old = dp[i + 1];
+                if c1 == c2 {
+                    dp[i + 1] = left_top + 1;
+                } else {
+                    dp[i + 1] = dp[i].max(dp[i + 1]);
+                }
+                left_top = old;
+            }
+        }
+        dp[n]
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

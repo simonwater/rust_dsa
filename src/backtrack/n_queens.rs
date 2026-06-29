@@ -43,15 +43,9 @@ impl Solution {
         let n = path.len();
         let mut ans = Vec::with_capacity(n);
         for &c in path {
-            let mut row = String::with_capacity(n);
-            for i in 0..n {
-                if i == c {
-                    row.push('Q');
-                } else {
-                    row.push('.');
-                }
-            }
-            ans.push(row);
+            let mut row = vec![b'.'; n];
+            row[c] = b'Q';
+            ans.push(String::from_utf8(row).unwrap());
         }
         ans
     }
