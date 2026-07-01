@@ -25,3 +25,4 @@ pub mod update_matrix;
 pub mod word_ladder;
 pub mod word_search;
 pub mod word_search_ii;
+pub mod min_mutation;
