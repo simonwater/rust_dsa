@@ -1,6 +1,6 @@
 /// [743. 网络延迟时间](https://leetcode.cn/problems/network-delay-time/)
 /// dijkstra算法
-struct Solution;
+pub struct Solution;
 use std::{cmp::Reverse, collections::BinaryHeap};
 impl Solution {
     pub fn network_delay_time(times: Vec<Vec<i32>>, n: i32, k: i32) -> i32 {
@@ -54,7 +54,7 @@ struct Edge {
     time: i32,
 }
 const EMPTY_EDGE: usize = usize::MAX;
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn network_delay_time(times: Vec<Vec<i32>>, n: i32, k: i32) -> i32 {
         let n = n as usize;
@@ -113,8 +113,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

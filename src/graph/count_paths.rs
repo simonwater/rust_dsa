@@ -2,7 +2,7 @@
 /// dijkstra算法
 use std::{cmp::Reverse, collections::BinaryHeap};
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn count_paths(n: i32, roads: Vec<Vec<i32>>) -> i32 {
@@ -45,8 +45,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

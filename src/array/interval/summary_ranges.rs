@@ -1,5 +1,5 @@
 /// [228. 汇总区间](https://leetcode.cn/problems/summary-ranges/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn summary_ranges(nums: Vec<i32>) -> Vec<String> {

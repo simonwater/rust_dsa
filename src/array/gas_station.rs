@@ -1,5 +1,5 @@
 /// [134. 加油站](https://leetcode.cn/problems/gas-station/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn can_complete_circuit(gas: Vec<i32>, cost: Vec<i32>) -> i32 {
@@ -24,8 +24,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

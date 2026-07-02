@@ -1,6 +1,6 @@
 use crate::linkedlist::ListNode;
 /// [86. 分隔链表](https://leetcode.cn/problems/partition-list/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn partition(head: Option<Box<ListNode>>, x: i32) -> Option<Box<ListNode>> {

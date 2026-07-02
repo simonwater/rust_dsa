@@ -1,7 +1,7 @@
 /// # [416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/)
 ///
 /// 状态定义：`dp[i][amt]` 表示nums中前i个是否能构成amt
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -35,7 +35,7 @@ impl Solution {
 /// `dp[j]=dp[j] ∣ dp[j−nums[i]]` <br>
 /// 且需要注意的是第二层的循环我们需要从大到小计算，因为如果我们从小到大更新 dp 值，
 /// 那么在计算 dp[j] 值的时候，dp[j−nums[i]] 已经是被更新过的状态，不再是上一行的 dp 值。
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     //

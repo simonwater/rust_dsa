@@ -1,5 +1,5 @@
 /// [125. 验证回文串](https://leetcode.cn/problems/valid-palindrome/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_palindrome(s: String) -> bool {

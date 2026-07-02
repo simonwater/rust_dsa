@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [513. 找树左下角的值](https://leetcode.cn/problems/find-bottom-left-tree-value/)
-struct Solution;
+pub struct Solution;
 use std::collections::VecDeque;
 impl Solution {
     /// 按照先右后左的顺序入队列，最后弹出的节点就是树的左下角节点
@@ -30,7 +30,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     /// 前序遍历访问树，记录当前访问到的最大深度，更新最大深度时记录刚访问到的节点，
     /// 该节点即为该深度的第一个节点，访问完后记下的节点即为结果。

@@ -1,6 +1,6 @@
 use crate::linkedlist::ListNode;
 /// [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn insertion_sort_list(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
@@ -21,7 +21,7 @@ impl Solution {
 }
 
 // 已经有序时进行优化，需要用到裸指针
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn insertion_sort_list(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut dummy = ListNode::new(i32::MIN);
@@ -54,8 +54,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

@@ -1,14 +1,14 @@
-use std::{cell::RefCell, ops::Deref};
+use std::cell::RefCell;
 
-trait Messenger {
+pub trait Messenger {
     fn send(&self, s: &str);
 }
 
-struct MockMessenger {
+pub struct MockMessenger {
     messages: RefCell<Vec<String>>,
 }
 impl MockMessenger {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             messages: RefCell::new(Vec::with_capacity(125)),
         }
@@ -27,10 +27,6 @@ impl Messenger for MockMessenger {
 
 #[cfg(test)]
 mod tests {
-    use std::cell::RefCell;
-
-    use super::*;
-
     #[test]
     fn test1() {}
 }

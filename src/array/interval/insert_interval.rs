@@ -1,5 +1,5 @@
 /// [57. 插入区间](https://leetcode.cn/problems/insert-interval/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn insert(intervals: Vec<Vec<i32>>, mut new_interval: Vec<i32>) -> Vec<Vec<i32>> {

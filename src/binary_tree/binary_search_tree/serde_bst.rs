@@ -1,16 +1,16 @@
 /// [449. 序列化和反序列化二叉搜索树](https://leetcode.cn/problems/serialize-and-deserialize-bst/)
 ///
 use crate::binary_tree::TreeNode;
-use std::cell::{Ref, RefCell};
+use std::cell::RefCell;
 use std::rc::Rc;
-struct Codec {}
+pub struct Codec {}
 
 impl Codec {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self {}
     }
 
-    fn serialize(&self, root: Option<Rc<RefCell<TreeNode>>>) -> String {
+    pub fn serialize(&self, root: Option<Rc<RefCell<TreeNode>>>) -> String {
         let mut ans = Vec::with_capacity(32);
         self.dfs(&root, &mut ans);
         ans.iter()
@@ -28,7 +28,7 @@ impl Codec {
         }
     }
 
-    fn deserialize(&self, data: String) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn deserialize(&self, data: String) -> Option<Rc<RefCell<TreeNode>>> {
         if data.is_empty() {
             return None;
         }

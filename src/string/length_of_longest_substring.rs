@@ -1,5 +1,5 @@
 /// [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters)
-struct Solution;
+pub struct Solution;
 
 use std::collections::HashSet;
 impl Solution {

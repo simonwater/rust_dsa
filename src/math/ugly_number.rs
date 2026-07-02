@@ -1,5 +1,5 @@
 /// [264. 丑数 II](https://leetcode.cn/problems/ugly-number-ii/)
-struct Solution;
+pub struct Solution;
 use std::cmp::Reverse;
 use std::collections::BinaryHeap;
 use std::collections::HashSet;
@@ -27,8 +27,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

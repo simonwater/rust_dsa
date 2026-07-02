@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [700. 二叉搜索树中的搜索](https://leetcode.cn/problems/search-in-a-binary-search-tree/)
-struct Solution;
+pub struct Solution;
 // 递归
 impl Solution {
     pub fn search_bst(
@@ -26,7 +26,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 // 迭代
 impl Solution2 {
     pub fn search_bst(
@@ -50,9 +50,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

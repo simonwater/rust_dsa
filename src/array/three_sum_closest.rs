@@ -1,5 +1,5 @@
 /// [16. 最接近的三数之和](https://leetcode.cn/problems/3sum-closest/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn three_sum_closest(mut nums: Vec<i32>, target: i32) -> i32 {

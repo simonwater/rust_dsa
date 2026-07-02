@@ -5,7 +5,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// 递归中序遍历
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -40,7 +40,7 @@ impl Solution {
 }
 
 /// 递归逆中序遍历
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn inorder_successor(
         root: Option<Rc<RefCell<TreeNode>>>,
@@ -73,7 +73,7 @@ impl Solution2 {
 }
 
 /// 迭代中序遍历
-struct Solution3;
+pub struct Solution3;
 impl Solution3 {
     pub fn inorder_successor(
         root: Option<Rc<RefCell<TreeNode>>>,
@@ -103,7 +103,7 @@ impl Solution3 {
 }
 
 /// 二叉搜索树递归查找
-struct Solution4;
+pub struct Solution4;
 impl Solution4 {
     pub fn inorder_successor(
         root: Option<Rc<RefCell<TreeNode>>>,
@@ -133,7 +133,7 @@ impl Solution4 {
 }
 
 /// 二叉搜索树迭代查找
-struct Solution5;
+pub struct Solution5;
 impl Solution5 {
     pub fn inorder_successor(
         root: Option<Rc<RefCell<TreeNode>>>,
@@ -160,9 +160,6 @@ impl Solution5 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

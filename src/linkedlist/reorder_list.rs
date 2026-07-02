@@ -1,6 +1,6 @@
 use crate::linkedlist::ListNode;
 /// [143. 重排链表](https://leetcode.cn/problems/reorder-list/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn reorder_list(head: &mut Option<Box<ListNode>>) {

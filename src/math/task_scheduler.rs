@@ -1,5 +1,5 @@
 /// [621. 任务调度器](https://leetcode.cn/problems/task-scheduler/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn least_interval(tasks: Vec<char>, n: i32) -> i32 {

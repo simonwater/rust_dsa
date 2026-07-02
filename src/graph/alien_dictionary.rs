@@ -1,10 +1,7 @@
-use std::collections::{HashMap, VecDeque};
-
-use crate::graph::node;
-
+use std::collections::VecDeque;
 /// # [LCR 114. 火星词典](https://leetcode.cn/problems/Jf1JuT/)
 /// 拓扑排序
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //

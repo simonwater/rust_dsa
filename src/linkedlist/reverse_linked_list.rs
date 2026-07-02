@@ -1,6 +1,6 @@
 use crate::linkedlist::ListNode;
 /// [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     /// [92. 反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/description/)

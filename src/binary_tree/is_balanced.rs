@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_balanced(root: Option<Rc<RefCell<TreeNode>>>) -> bool {

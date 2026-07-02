@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn max_path_sum(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
@@ -27,9 +27,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

@@ -1,4 +1,4 @@
-struct Solution;
+pub struct Solution;
 /// 双指针原地栈：两个指针一个负责对旧数组做扫描，并选择旧数组中符合条件的数。另一个指针负责建设新数组。
 impl Solution {
     /// [283. 移动零](https://leetcode.cn/problems/move-zeroes)
@@ -44,7 +44,7 @@ impl Solution {
 
     /// [80. 删除有序数组中的重复项 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii)
     /// 需要注意判断是否相等时应该同栈顶下方的元素比较，而不能跟快指针前两位的数比较，因为这个位置如果指向原地栈，则可能已经被污染。
-    pub fn remove_duplicatesII(nums: &mut Vec<i32>) -> i32 {
+    pub fn remove_duplicates_ii(nums: &mut Vec<i32>) -> i32 {
         let n = nums.len();
         if n <= 2 {
             return n as i32;
@@ -107,12 +107,12 @@ mod tests {
     fn test4() {
         let mut nums = vec![1, 1, 1, 2, 2, 3];
         let ans = 5;
-        assert_eq!(Solution::remove_duplicatesII(&mut nums), ans);
+        assert_eq!(Solution::remove_duplicates_ii(&mut nums), ans);
         assert_eq!(&nums[..ans as usize], &[1, 1, 2, 2, 3]);
 
         let mut nums = vec![0, 0, 0, 1, 1, 1, 2, 3, 3];
         let ans = 7;
-        assert_eq!(Solution::remove_duplicatesII(&mut nums), ans);
+        assert_eq!(Solution::remove_duplicates_ii(&mut nums), ans);
         assert_eq!(&nums[..ans as usize], &[0, 0, 1, 1, 2, 3, 3]);
     }
 }

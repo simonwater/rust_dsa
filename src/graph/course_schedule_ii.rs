@@ -1,8 +1,6 @@
 /// [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii/)
-struct Solution;
+pub struct Solution;
 use std::collections::VecDeque;
-
-use crate::graph::course_schedule_ii::State::{Visited, Visiting};
 
 /// bfs拓扑排序
 impl Solution {
@@ -41,7 +39,7 @@ impl Solution {
 }
 
 // dfs，前向时判断是否有环，回溯时收集路径节点
-struct Solution2;
+pub struct Solution2;
 #[derive(PartialEq, Eq, Clone, Copy)]
 enum State {
     UnVisited,
@@ -90,7 +88,7 @@ impl Solution2 {
 }
 
 /// 链式前向星存储图
-struct Solution3;
+pub struct Solution3;
 #[derive(Clone, Copy, Eq, PartialEq)]
 struct Edge {
     pub to: usize,
@@ -143,8 +141,6 @@ impl Solution3 {
 }
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

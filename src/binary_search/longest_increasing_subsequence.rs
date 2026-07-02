@@ -1,5 +1,5 @@
 /// [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn length_of_lis(nums: Vec<i32>) -> i32 {
@@ -41,8 +41,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

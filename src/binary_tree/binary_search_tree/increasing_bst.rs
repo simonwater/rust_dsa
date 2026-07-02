@@ -4,18 +4,18 @@ use crate::binary_tree::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
     pub fn increasing_bst(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
-        let mut ans = Rc::new(RefCell::new(TreeNode::new(0)));
+        let ans = Rc::new(RefCell::new(TreeNode::new(0)));
         let mut prev = ans.clone();
         Self::dfs(root, &mut prev);
         ans.borrow_mut().right.take()
     }
 
-    fn dfs(mut root: Option<Rc<RefCell<TreeNode>>>, prev: &mut Rc<RefCell<TreeNode>>) {
+    fn dfs(root: Option<Rc<RefCell<TreeNode>>>, prev: &mut Rc<RefCell<TreeNode>>) {
         if let Some(root_rc) = root {
             let (left, right) = {
                 let mut root_node = root_rc.borrow_mut();
@@ -29,7 +29,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     //
@@ -39,7 +39,7 @@ impl Solution2 {
         ans
     }
 
-    fn dfs(mut root: Option<Rc<RefCell<TreeNode>>>, ans: &mut Option<Rc<RefCell<TreeNode>>>) {
+    fn dfs(root: Option<Rc<RefCell<TreeNode>>>, ans: &mut Option<Rc<RefCell<TreeNode>>>) {
         if let Some(root_rc) = root {
             let (left, right) = {
                 let mut root_node = root_rc.borrow_mut();
@@ -53,7 +53,7 @@ impl Solution2 {
     }
 }
 
-struct Solution3;
+pub struct Solution3;
 
 impl Solution3 {
     //
@@ -89,9 +89,6 @@ impl Solution3 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

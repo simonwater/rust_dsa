@@ -1,7 +1,7 @@
 /// [224. 基本计算器](https://leetcode.cn/problems/basic-calculator/)
 /// [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii/)
 /// [772. 基本计算器 III](https://leetcode.cn/problems/basic-calculator-iii/)
-struct Solution;
+pub struct Solution;
 
 // 支持i32整数减+、-、*、/、（、）的表达式计算
 impl Solution {

@@ -1,5 +1,5 @@
 /// [658. 找到 K 个最接近的元素](https://leetcode.cn/problems/find-k-closest-elements/)
-struct Solution;
+pub struct Solution;
 
 use std::collections::BinaryHeap;
 

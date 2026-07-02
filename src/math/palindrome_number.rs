@@ -1,5 +1,5 @@
 /// [9. 回文数](https://leetcode.cn/problems/palindrome-number/)
-struct Solution;
+pub struct Solution;
 // 得到逆序数字再判断
 impl Solution {
     pub fn is_palindrome(x: i32) -> bool {
@@ -16,7 +16,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 // 只判断一半，0结尾的需要特殊判断
 impl Solution2 {
@@ -33,11 +33,11 @@ impl Solution2 {
     }
 }
 
-struct Solution3;
+pub struct Solution3;
 
 // 转为字符串再判断
 impl Solution3 {
-    pub fn is_palindrome(mut x: i32) -> bool {
+    pub fn is_palindrome(x: i32) -> bool {
         let s = x.to_string();
         let s_bytes = s.as_bytes();
         let mut i = 0;
@@ -58,8 +58,6 @@ impl Solution3 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

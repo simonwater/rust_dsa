@@ -1,5 +1,5 @@
 /// [169. 多数元素](https://leetcode.cn/problems/majority-element/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn majority_element_sort(mut nums: Vec<i32>) -> i32 {
@@ -7,7 +7,7 @@ impl Solution {
         nums[nums.len() / 2]
     }
 
-    pub fn majority_element_vote(mut nums: Vec<i32>) -> i32 {
+    pub fn majority_element_vote(nums: Vec<i32>) -> i32 {
         let mut ans = nums[0];
         let mut score = 0;
         for num in nums {

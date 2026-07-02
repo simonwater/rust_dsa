@@ -1,7 +1,7 @@
 /// [2. 两数相加](https://leetcode.cn/problems/add-two-numbers/description/)
 use crate::linkedlist::ListNode;
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn add_two_numbers(

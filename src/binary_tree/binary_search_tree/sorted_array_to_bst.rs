@@ -1,9 +1,9 @@
 /// [108. 将有序数组转换为二叉搜索树](https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/)
 use crate::binary_tree::TreeNode;
-use std::cell::{Ref, RefCell};
+use std::cell::RefCell;
 use std::rc::Rc;
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     // 索引定位
@@ -32,7 +32,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     // 切片
@@ -54,9 +54,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

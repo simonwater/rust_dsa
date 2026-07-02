@@ -1,7 +1,7 @@
 /// # [64. 最小路径和](https://leetcode.cn/problems/minimum-path-sum/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -27,8 +27,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

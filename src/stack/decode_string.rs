@@ -1,5 +1,5 @@
 /// [394. 字符串解码](https://leetcode.cn/problems/decode-string/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn decode_string(s: String) -> String {
@@ -35,8 +35,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

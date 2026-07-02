@@ -1,5 +1,5 @@
 /// [994. 腐烂的橘子](https://leetcode.cn/problems/rotting-oranges/)
-struct Solution;
+pub struct Solution;
 use std::collections::VecDeque;
 impl Solution {
     // bfs，原地模拟
@@ -44,8 +44,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

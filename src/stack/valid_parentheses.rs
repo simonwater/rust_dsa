@@ -1,5 +1,5 @@
 /// [20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_valid(s: String) -> bool {

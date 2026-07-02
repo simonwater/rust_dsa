@@ -1,5 +1,5 @@
 /// [75. 颜色分类](https://leetcode.cn/problems/sort-colors/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn sort_colors(nums: &mut Vec<i32>) {
@@ -28,8 +28,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

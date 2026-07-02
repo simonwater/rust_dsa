@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {

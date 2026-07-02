@@ -1,6 +1,6 @@
 use crate::linkedlist::ListNode;
 /// [23. 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn merge_k_lists(mut lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
@@ -49,12 +49,9 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
-use std::{
-    cmp::{Ordering, Reverse},
-    collections::BinaryHeap,
-};
+use std::{cmp::Ordering, collections::BinaryHeap};
 #[derive(Eq, PartialEq)]
 struct MyNode(Box<ListNode>);
 impl Ord for MyNode {

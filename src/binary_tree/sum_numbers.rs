@@ -3,14 +3,14 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn sum_numbers(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         if root.is_none() {
             return 0;
         }
-        let mut num = 0;
+        let num = 0;
         let mut ans = 0;
         Self::dfs(root, num, &mut ans);
         ans

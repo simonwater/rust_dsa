@@ -1,5 +1,5 @@
 /// [67. 二进制求和](https://leetcode.cn/problems/add-binary/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn add_binary(a: String, b: String) -> String {

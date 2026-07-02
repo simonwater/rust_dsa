@@ -4,7 +4,7 @@ use std::collections::VecDeque;
 use std::rc::Rc;
 
 /// [637. 二叉树的层平均值](https://leetcode.cn/problems/average-of-levels-in-binary-tree/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn average_of_levels(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<f64> {

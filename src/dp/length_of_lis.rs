@@ -2,7 +2,7 @@
 ///
 
 /// 动态规划：dp[i]表示以nums[i]结尾的最长递增子序列长度，中间记录全局最大长度值
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -23,7 +23,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     //
@@ -68,8 +68,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

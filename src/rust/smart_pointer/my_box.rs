@@ -1,9 +1,9 @@
 use std::ops::Deref;
 
-struct MyBox<T>(T);
+pub struct MyBox<T>(T);
 
 impl<T> MyBox<T> {
-    fn new(value: T) -> Self {
+    pub fn new(value: T) -> Self {
         Self(value)
     }
 }
@@ -22,7 +22,7 @@ impl<T> Drop for MyBox<T> {
     }
 }
 
-fn hello(s: &str) {
+pub fn hello(s: &str) {
     println!("Hello {s}");
 }
 
@@ -34,7 +34,7 @@ mod tests {
     fn test1() {
         let x = 5;
         let y = MyBox::new(x);
-        y.max(111);
+        let _z = y.max(111);
         assert_eq!(x, 5);
         assert_eq!(x, *y);
         assert_eq!(x, *(y.deref()));

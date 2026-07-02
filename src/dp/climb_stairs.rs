@@ -1,5 +1,5 @@
 /// [70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn climb_stairs(n: i32) -> i32 {
@@ -13,8 +13,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

@@ -1,7 +1,7 @@
 /// # [797. 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -34,8 +34,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

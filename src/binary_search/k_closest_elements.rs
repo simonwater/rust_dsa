@@ -1,7 +1,5 @@
 /// [658. 找到 K 个最接近的元素](https://leetcode.cn/problems/find-k-closest-elements/)
-struct Solution;
-
-use std::collections::BinaryHeap;
+pub struct Solution;
 
 impl Solution {
     /// 二分查找：因为范围固定是k，查找到左边界left，右边界就是left + k - 1，让左边界和右边界的后一个位置right = left + k比较，用排除法来理解：

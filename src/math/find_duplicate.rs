@@ -1,7 +1,7 @@
 /// # [287. 寻找重复数](https://leetcode.cn/problems/find-the-duplicate-number/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     // 环状链表寻找环入口
@@ -26,8 +26,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

@@ -1,7 +1,7 @@
 /// # [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -31,8 +31,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

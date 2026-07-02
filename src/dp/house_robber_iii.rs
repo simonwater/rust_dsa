@@ -4,7 +4,7 @@ use crate::binary_tree::TreeNode;
 use std::cell::RefCell;
 use std::collections::HashMap;
 use std::rc::Rc;
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     // 自顶向下记忆化搜索
@@ -44,7 +44,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn rob(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         let ans = Self::dfs(&root);
@@ -68,8 +68,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

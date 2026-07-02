@@ -1,5 +1,5 @@
 /// [77. 组合](https://leetcode.cn/problems/combinations/)
-struct Solution;
+pub struct Solution;
 impl Solution {
     pub fn combine(n: i32, k: i32) -> Vec<Vec<i32>> {
         let mut ans = Vec::with_capacity(16);
@@ -24,7 +24,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn combine(n: i32, k: i32) -> Vec<Vec<i32>> {
         let mut ans = Vec::with_capacity(16);
@@ -48,8 +48,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

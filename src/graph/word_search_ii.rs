@@ -1,7 +1,7 @@
 /// # [212. 单词搜索 II](https://leetcode.cn/problems/word-search-ii/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 struct Trie {
     word: Option<String>,
@@ -91,8 +91,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

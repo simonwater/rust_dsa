@@ -1,5 +1,5 @@
 /// [973. 最接近原点的 K 个点](https://leetcode.cn/problems/k-closest-points-to-origin/)
-struct Solution;
+pub struct Solution;
 
 use std::collections::BinaryHeap;
 impl Solution {

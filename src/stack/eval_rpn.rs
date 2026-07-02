@@ -1,5 +1,5 @@
 /// [150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/)
-struct Solution;
+pub struct Solution;
 
 /// 栈
 /// 注意栈容量的计算
@@ -33,8 +33,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

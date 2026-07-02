@@ -1,19 +1,19 @@
 /// [295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream/)
-struct MedianFinder {
+pub struct MedianFinder {
     left_max: BinaryHeap<i32>,
     right_min: BinaryHeap<Reverse<i32>>,
 }
 
 use std::{cmp::Reverse, collections::BinaryHeap};
 impl MedianFinder {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             left_max: BinaryHeap::with_capacity(128),
             right_min: BinaryHeap::with_capacity(128),
         }
     }
 
-    fn add_num(&mut self, num: i32) {
+    pub fn add_num(&mut self, num: i32) {
         if self.left_max.len() == self.right_min.len() {
             match self.right_min.peek() {
                 Some(&Reverse(val)) if num > val => {
@@ -35,7 +35,7 @@ impl MedianFinder {
         }
     }
 
-    fn find_median(&self) -> f64 {
+    pub fn find_median(&self) -> f64 {
         if self.left_max.len() > self.right_min.len() {
             return *self.left_max.peek().unwrap() as f64;
         } else {

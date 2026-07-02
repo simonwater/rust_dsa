@@ -1,5 +1,5 @@
 /// [438. 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn find_anagrams(s: String, p: String) -> Vec<i32> {
@@ -37,8 +37,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

@@ -2,20 +2,20 @@ use rand::Rng;
 use std::collections::HashMap;
 
 /// [380. O(1) 时间插入、删除和获取随机元素](https://leetcode.cn/problems/insert-delete-getrandom-o1)
-struct RandomizedSet {
+pub struct RandomizedSet {
     val_vec: Vec<i32>,
     idx_map: HashMap<i32, usize>,
 }
 
 impl RandomizedSet {
-    fn new() -> Self {
+    pub fn new() -> Self {
         RandomizedSet {
             val_vec: Vec::new(),
             idx_map: HashMap::new(),
         }
     }
 
-    fn insert(&mut self, val: i32) -> bool {
+    pub fn insert(&mut self, val: i32) -> bool {
         if self.idx_map.contains_key(&val) {
             return false;
         }
@@ -24,7 +24,7 @@ impl RandomizedSet {
         true
     }
 
-    fn remove(&mut self, val: i32) -> bool {
+    pub fn remove(&mut self, val: i32) -> bool {
         if let Some(idx) = self.idx_map.remove(&val) {
             if idx < self.val_vec.len() - 1 {
                 let last_idx = self.val_vec.len() - 1;
@@ -39,7 +39,7 @@ impl RandomizedSet {
         }
     }
 
-    fn get_random(&self) -> i32 {
+    pub fn get_random(&self) -> i32 {
         // 无需放到结构体属性上，否则get_random方法的mut会影响并发性能
         let mut rng = rand::thread_rng();
         let idx: usize = rng.gen_range(0..self.val_vec.len());

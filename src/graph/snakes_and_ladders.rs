@@ -1,7 +1,7 @@
 /// # [909. 蛇梯棋](https://leetcode.cn/problems/snakes-and-ladders/)
 /// bfs广度优先搜索
 
-struct Solution;
+pub struct Solution;
 
 use std::collections::VecDeque;
 impl Solution {
@@ -52,8 +52,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

@@ -1,12 +1,12 @@
 /// [528. 按权重随机选择](https://leetcode.cn/problems/random-pick-with-weight/)
 use rand::Rng;
-struct Solution {
+pub struct Solution {
     intervals: Vec<(i32, i32)>,
     total: i32,
 }
 
 impl Solution {
-    fn new(w: Vec<i32>) -> Self {
+    pub fn new(w: Vec<i32>) -> Self {
         let mut intervals = Vec::with_capacity(w.len());
         let mut start = 0;
         for cnt in w {
@@ -19,7 +19,7 @@ impl Solution {
         }
     }
 
-    fn pick_index(&self) -> i32 {
+    pub fn pick_index(&self) -> i32 {
         let mut rng = rand::thread_rng();
         let x = rng.gen_range(0..self.total);
         let mut lo = 0;
@@ -40,13 +40,13 @@ impl Solution {
     }
 }
 
-struct Solution2 {
+pub struct Solution2 {
     bounds: Vec<i32>,
     total: i32,
 }
 
 impl Solution2 {
-    fn new(w: Vec<i32>) -> Self {
+    pub fn new(w: Vec<i32>) -> Self {
         let mut bounds = Vec::with_capacity(w.len());
         let mut total = w[0];
         bounds.push(total - 1); // 右边界
@@ -57,7 +57,7 @@ impl Solution2 {
         Self { bounds, total }
     }
 
-    fn pick_index(&self) -> i32 {
+    pub fn pick_index(&self) -> i32 {
         let mut rng = rand::thread_rng();
         let x = rng.gen_range(0..self.total);
         // 寻找大于等于x的第一个索引

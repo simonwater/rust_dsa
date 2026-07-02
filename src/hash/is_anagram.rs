@@ -1,5 +1,5 @@
 /// [242. 有效的字母异位词](https://leetcode.cn/problems/valid-anagram/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     /// 使用栈上固定大小的数组记录字符频次，相比堆上哈希表性能高很多。

@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 /// [205. 同构字符串](https://leetcode.cn/problems/isomorphic-strings/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_isomorphic(s: String, t: String) -> bool {
@@ -26,8 +26,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

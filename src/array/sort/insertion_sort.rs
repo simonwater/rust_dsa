@@ -1,4 +1,4 @@
-struct InsertionSort;
+pub struct InsertionSort;
 /// 插入排序
 impl InsertionSort {
     pub fn sort(nums: &mut Vec<i32>) {

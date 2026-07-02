@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [572. 另一棵树的子树](https://leetcode.cn/problems/subtree-of-another-tree/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_subtree_simple(

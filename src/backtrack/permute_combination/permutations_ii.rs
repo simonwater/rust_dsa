@@ -1,5 +1,5 @@
 /// [47. 全排列 II](https://leetcode.cn/problems/permutations-ii/)
-struct Solution;
+pub struct Solution;
 use std::collections::HashSet;
 impl Solution {
     pub fn permute_unique(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
@@ -28,8 +28,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

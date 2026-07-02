@@ -1,5 +1,5 @@
 /// [207. 课程表](https://leetcode.cn/problems/course-schedule/)
-struct Solution;
+pub struct Solution;
 use std::collections::VecDeque;
 
 /// 拓扑排序
@@ -35,7 +35,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     pub fn can_finish(num_courses: i32, prerequisites: Vec<Vec<i32>>) -> bool {

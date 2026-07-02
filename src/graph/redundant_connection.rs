@@ -1,6 +1,6 @@
 /// [684. 冗余连接](https://leetcode.cn/problems/redundant-connection/)
 /// 并查集，路径压缩
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn find_redundant_connection(edges: Vec<Vec<i32>>) -> Vec<i32> {
@@ -18,7 +18,7 @@ impl Solution {
         vec![]
     }
 
-    fn find(mut val: usize, parents: &mut [usize]) -> usize {
+    fn find(val: usize, parents: &mut [usize]) -> usize {
         if parents[val] == val {
             return val;
         }
@@ -29,8 +29,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

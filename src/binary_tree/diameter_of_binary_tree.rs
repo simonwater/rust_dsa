@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn diameter_of_binary_tree(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {

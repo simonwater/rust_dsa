@@ -2,7 +2,7 @@
 ///
 
 /// 以车站为节点建图，相邻节点为：所有经过当前车站的bus所经过的车站。
-struct Solution;
+pub struct Solution;
 
 use std::collections::{HashMap, HashSet, VecDeque};
 impl Solution {
@@ -53,7 +53,7 @@ impl Solution {
 }
 
 /// 以bus为图节点，相邻节点为：当前bus经过的所有车站上经过的bus
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     //
@@ -105,8 +105,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

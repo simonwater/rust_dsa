@@ -1,5 +1,5 @@
 /// [238. 除了自身以外数组的乘积](https://leetcode.cn/problems/product-of-array-except-self/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {

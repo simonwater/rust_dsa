@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 /// [1. 两数之和](https://leetcode.cn/problems/two-sum/description/)
 /// [167. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {

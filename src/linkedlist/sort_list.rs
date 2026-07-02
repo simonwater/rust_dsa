@@ -1,6 +1,6 @@
 /// [148. 排序链表](https://leetcode.cn/problems/sort-list/description/)
 use crate::linkedlist::ListNode;
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn sort_list(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {

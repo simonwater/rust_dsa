@@ -1,5 +1,5 @@
 /// [977. 有序数组的平方](https://leetcode.cn/problems/squares-of-a-sorted-array/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn sorted_squares_simple(nums: Vec<i32>) -> Vec<i32> {

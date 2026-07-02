@@ -1,8 +1,8 @@
 /// [79. 单词搜索](https://leetcode.cn/problems/word-search/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
-    pub fn exist(board: Vec<Vec<char>>, mut word: String) -> bool {
+    pub fn exist(board: Vec<Vec<char>>, word: String) -> bool {
         let mut word_bytes = word.into_bytes();
         let m = board.len();
         let n = board[0].len();
@@ -79,8 +79,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

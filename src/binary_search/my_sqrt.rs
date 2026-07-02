@@ -1,7 +1,7 @@
 /// # [69. x 的平方根 ](https://leetcode.cn/problems/sqrtx/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -28,8 +28,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

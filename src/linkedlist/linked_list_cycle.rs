@@ -1,10 +1,10 @@
 use crate::linkedlist::ListNode;
 
 /// [141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
-    pub fn has_cycle(mut head: Option<Box<ListNode>>) -> bool {
+    pub fn has_cycle(head: Option<Box<ListNode>>) -> bool {
         let mut slow = head.as_ref();
         let mut fast = head.as_ref();
         while let (Some(s), Some(f)) = (slow, fast) {
@@ -26,7 +26,7 @@ impl Solution {
         false
     }
 
-    pub fn has_cycle2(mut head: Option<Box<ListNode>>) -> bool {
+    pub fn has_cycle2(head: Option<Box<ListNode>>) -> bool {
         let mut slow = head.as_deref();
         let mut fast = head.as_deref();
         while let (Some(s), Some(f)) = (slow, fast) {

@@ -1,5 +1,5 @@
 /// [15. 三数之和](https://leetcode.cn/problems/3sum/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {

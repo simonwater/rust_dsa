@@ -1,5 +1,5 @@
 /// [452. 用最少数量的箭引爆气球](https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     // 左边界排序
@@ -24,7 +24,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     // 右边界排序
@@ -47,8 +47,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

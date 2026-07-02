@@ -1,6 +1,6 @@
 use crate::linkedlist::ListNode;
 /// [23. 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn merge_k_lists(mut lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
@@ -48,8 +48,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {
         let mut vec = vec![1];

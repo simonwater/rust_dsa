@@ -1,5 +1,5 @@
 /// [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn search_range(nums: Vec<i32>, target: i32) -> Vec<i32> {
@@ -46,7 +46,7 @@ impl Solution {
         ans
     }
 
-    fn search_bound2(nums: &[i32], target: i32, is_lower: bool) -> i32 {
+    pub fn search_bound2(nums: &[i32], target: i32, is_lower: bool) -> i32 {
         let mut lo = 0isize;
         let mut hi = nums.len() as isize - 1;
         let mut ans = -1isize;

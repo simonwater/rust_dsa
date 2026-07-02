@@ -8,10 +8,10 @@
 /// 递归函数语义为: `dfs(i, amt)` 表示 `coins[0..i]` (前i个元素)中能够构成amt的组合总数。   
 /// 根据 `coins[i - 1]` 选择或者不选择，能得到问题规模缩小的关系是：
 /// `dfs(i, amt) = dfs(i, amt - coins[i - 1]) + dfs(i - 1, amt)`
-struct MemoDFS1;
+pub struct MemoDFS1;
 
 impl MemoDFS1 {
-    pub fn change(amount: i32, mut coins: Vec<i32>) -> i32 {
+    pub fn change(amount: i32, coins: Vec<i32>) -> i32 {
         let amount = amount as usize;
         let mut memo = vec![vec![-1; coins.len() + 1]; amount + 1];
         Self::dfs(coins.len(), &coins, amount, &mut memo)
@@ -43,10 +43,10 @@ impl MemoDFS1 {
 ///
 /// `dp[amt][i]` 表示通过`coins[0..i]`中的数据(前i个数)构成 amt 的组合总数。<br>
 /// 所以`dp[amt][i] = dp[amt][i - 1] + dp[amt - coins[i - 1]][i]` (不选`coins[i - 1]` + 选择`coins[i - 1]`)
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
-    pub fn change(amount: i32, mut coins: Vec<i32>) -> i32 {
+    pub fn change(amount: i32, coins: Vec<i32>) -> i32 {
         let amount = amount as usize;
         let n = coins.len();
         let mut dp = vec![vec![0; n + 1]; amount + 1];
@@ -76,18 +76,18 @@ impl Solution2 {
 /// 以[1,2]构成3为例，以1结尾时：`dp[3] += dp[3 - 1]`,对应的组合是(1,1,1)和(2,1)， 枚举到2结尾时，`dp[3] += dp[3 - 2]`,
 /// 对应的组合为 (1, 2)。所以构成3的所有组合是(1,1,1)，(2,1)和(1, 2)，`dp[3]`结果为错误的3。
 ///
-struct Solution3;
+pub struct Solution3;
 
 impl Solution3 {
     /// dp[i],凑成金额i的组合总数。
-    pub fn change(amount: i32, coins: Vec<i32>) -> i32 {
+    pub fn change(_amount: i32, _coins: Vec<i32>) -> i32 {
         0
     }
 }
 
 /// # 记忆化递归搜索，枚举所有可能
 /// MemoDFS2性能更差，耗时是MemoDFS1的20倍。
-struct MemoDFS2;
+pub struct MemoDFS2;
 
 impl MemoDFS2 {
     pub fn change(amount: i32, mut coins: Vec<i32>) -> i32 {
@@ -122,8 +122,6 @@ impl MemoDFS2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

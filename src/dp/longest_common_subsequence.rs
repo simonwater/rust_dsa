@@ -49,7 +49,7 @@ pub fn dp(text1: String, text2: String) -> i32 {
 
 /// 空间优化，二维数组压缩成一维。
 /// 对二维dp数组做更新时，更新值只取决于当前值左、上、左上三个位置的值
-struct Solution;
+pub struct Solution;
 impl Solution {
     pub fn longest_common_subsequence(text1: String, text2: String) -> i32 {
         let n = text2.len();

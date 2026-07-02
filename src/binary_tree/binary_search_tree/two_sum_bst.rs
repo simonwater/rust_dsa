@@ -4,7 +4,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// 哈希表 + 任意顺序遍历
-struct Solution;
+pub struct Solution;
 
 use std::collections::HashSet;
 impl Solution {
@@ -30,7 +30,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     pub fn find_target(root: Option<Rc<RefCell<TreeNode>>>, k: i32) -> bool {
@@ -79,7 +79,7 @@ impl Solution2 {
 
     fn en_stack2(
         mut visitor: Option<Rc<RefCell<TreeNode>>>,
-        mut stack: &mut Vec<Rc<RefCell<TreeNode>>>,
+        stack: &mut Vec<Rc<RefCell<TreeNode>>>,
     ) {
         while let Some(node_rc) = visitor {
             stack.push(Rc::clone(&node_rc));
@@ -90,9 +90,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

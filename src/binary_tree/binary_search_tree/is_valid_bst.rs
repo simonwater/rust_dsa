@@ -4,7 +4,7 @@ use crate::binary_tree::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
 
-struct Solution;
+pub struct Solution;
 
 // 自顶向下前序遍历
 impl Solution {
@@ -27,7 +27,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 // 递归中序遍历
 impl Solution2 {
@@ -55,7 +55,7 @@ impl Solution2 {
     }
 }
 
-struct Solution3;
+pub struct Solution3;
 
 // 迭代中序遍历
 impl Solution3 {
@@ -89,9 +89,6 @@ impl Solution3 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

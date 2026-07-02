@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn count_nodes(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
@@ -30,7 +30,7 @@ impl Solution {
         }
     }
 
-    fn get_height(root: &Option<Rc<RefCell<TreeNode>>>) -> i32 {
+    pub fn get_height(root: &Option<Rc<RefCell<TreeNode>>>) -> i32 {
         if let Some(node) = root {
             Self::get_height(&node.borrow().left) + 1
         } else {

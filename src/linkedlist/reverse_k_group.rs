@@ -1,6 +1,6 @@
 use crate::linkedlist::ListNode;
 /// [25. K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
-struct Solution;
+pub struct Solution;
 
 /// “探测 -> 斩断 -> 反转 -> 缝合 -> 推进”
 impl Solution {
@@ -53,8 +53,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

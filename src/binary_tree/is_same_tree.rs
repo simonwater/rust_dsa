@@ -1,9 +1,9 @@
-use crate::binary_tree::{TreeNode, is_same_tree};
+use crate::binary_tree::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [100. 相同的树](https://leetcode.cn/problems/same-tree/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_same_tree(

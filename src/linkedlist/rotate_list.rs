@@ -1,6 +1,6 @@
-use crate::{graph::node, linkedlist::ListNode};
+use crate::linkedlist::ListNode;
 /// [61. 旋转链表](https://leetcode.cn/problems/rotate-list/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn rotate_right(mut head: Option<Box<ListNode>>, mut k: i32) -> Option<Box<ListNode>> {
@@ -47,8 +47,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

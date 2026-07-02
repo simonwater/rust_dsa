@@ -1,5 +1,5 @@
 /// [162. 寻找峰值](https://leetcode.cn/problems/find-peak-element/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn find_peak_element(nums: Vec<i32>) -> i32 {
@@ -36,8 +36,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

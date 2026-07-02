@@ -2,7 +2,7 @@
 ///
 /// 使用二维数组记忆化中间结果时，需要区分“访问过不能再重复访问”但图上是联通的这种 “假不连通路径”。
 /// 不能提前把状态记为-1。
-struct Solution;
+pub struct Solution;
 
 use std::collections::HashMap;
 impl Solution {
@@ -87,8 +87,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use std::str::FromStr;
-
     use super::*;
 
     #[test]

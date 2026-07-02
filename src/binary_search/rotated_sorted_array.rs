@@ -1,5 +1,5 @@
 /// [33. 搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn search(nums: Vec<i32>, target: i32) -> i32 {

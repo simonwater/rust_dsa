@@ -4,7 +4,7 @@ use std::ops::Bound::Included;
 
 /// [217. 存在重复元素](https://leetcode.cn/problems/contains-duplicate/description/)
 /// [219. 存在重复元素 II](https://leetcode.cn/problems/contains-duplicate-ii/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     // set

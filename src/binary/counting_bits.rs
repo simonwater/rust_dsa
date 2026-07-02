@@ -1,5 +1,5 @@
 /// [338. 比特位计数](https://leetcode.cn/problems/counting-bits/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn count_bits(n: i32) -> Vec<i32> {

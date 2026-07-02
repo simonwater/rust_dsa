@@ -1,5 +1,5 @@
 /// [78. 子集](https://leetcode.cn/problems/subsets/)
-struct Solution;
+pub struct Solution;
 
 // 对每个数字都做选/不选两种决策，然后递归处理下一个数
 impl Solution {
@@ -23,7 +23,7 @@ impl Solution {
 }
 
 // 枚举每个位置的所有可能
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn subsets(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut ans: Vec<Vec<i32>> = Vec::with_capacity(16);
@@ -45,8 +45,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

@@ -1,11 +1,11 @@
 /// # [221. 最大正方形](https://leetcode.cn/problems/maximal-square/)
 /// 找到只包含1的最大正方形的面积
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
-    pub fn maximal_square(mut matrix: Vec<Vec<char>>) -> i32 {
+    pub fn maximal_square(matrix: Vec<Vec<char>>) -> i32 {
         let m = matrix.len();
         let n = matrix[0].len();
         let mut dp = vec![vec![0; n]; m];
@@ -28,15 +28,15 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     // 空间压缩，重点关注左上角值的滚动。当前值跟新前，是自己的top，也是下一个值的left-top，而更新以后则成为下一个值的left。
-    pub fn maximal_square(mut matrix: Vec<Vec<char>>) -> i32 {
+    pub fn maximal_square(matrix: Vec<Vec<char>>) -> i32 {
         let n = matrix[0].len();
         let mut dp = vec![0; n + 1];
         let mut ans = 0;
-        for (r, row) in matrix.iter().enumerate() {
+        for (_, row) in matrix.iter().enumerate() {
             let mut prev = 0;
             for (c, &val) in row.iter().enumerate() {
                 let i = c + 1; // dp数组索引
@@ -59,8 +59,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

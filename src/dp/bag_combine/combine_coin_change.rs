@@ -9,7 +9,7 @@
 /// 事实上是在枚举“排列”，比如由[1,2]构成3，那么(1,2)和(2,1)都会被枚举到，他们是相同组合，事实上是重复选择了，但因为
 /// 题目要求的是最少数量，而不是总数，所以对最终结果没有影响
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -40,8 +40,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

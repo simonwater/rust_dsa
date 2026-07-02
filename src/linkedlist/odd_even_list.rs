@@ -1,10 +1,10 @@
 /// [328. 奇偶链表](https://leetcode.cn/problems/odd-even-linked-list/description/)
 use crate::linkedlist::ListNode;
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
-    pub fn odd_even_list(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+    pub fn odd_even_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let (mut l1, mut l2) = (ListNode::new(0), ListNode::new(0));
         let (mut p1, mut p2) = (&mut l1, &mut l2);
         let mut cur = head;

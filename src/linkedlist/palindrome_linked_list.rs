@@ -1,7 +1,7 @@
 use crate::linkedlist::ListNode;
 
 /// [234. 回文链表](https://leetcode.cn/problems/palindrome-linked-list/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_palindrome(mut head: Option<Box<ListNode>>) -> bool {

@@ -1,7 +1,7 @@
 use std::cell::RefCell;
 use std::rc::Rc;
 
-enum List {
+pub enum List {
     Cons(RefCell<i32>, Rc<List>),
     Nil,
 }

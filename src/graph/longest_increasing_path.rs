@@ -1,7 +1,7 @@
 /// # [329. 矩阵中的最长递增路径](https://leetcode.cn/problems/longest-increasing-path-in-a-matrix/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -50,8 +50,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

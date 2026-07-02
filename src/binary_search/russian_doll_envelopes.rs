@@ -1,5 +1,5 @@
 /// [354. 俄罗斯套娃信封问题](https://leetcode.cn/problems/russian-doll-envelopes/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn max_envelopes(mut envelopes: Vec<Vec<i32>>) -> i32 {
@@ -49,8 +49,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

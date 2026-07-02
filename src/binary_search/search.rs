@@ -1,5 +1,5 @@
 /// [704. 二分查找](https://leetcode.cn/problems/binary-search/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn search(nums: Vec<i32>, target: i32) -> i32 {

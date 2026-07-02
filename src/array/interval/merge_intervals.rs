@@ -1,5 +1,5 @@
 /// [56. 合并区间](https://leetcode.cn/problems/merge-intervals/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn merge(mut intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {

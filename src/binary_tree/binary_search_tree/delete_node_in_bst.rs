@@ -5,7 +5,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// 递归解
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -25,7 +25,7 @@ impl Solution {
                 return Some(node_rc);
             } else {
                 let left = node.left.take();
-                let mut right = node.right.take();
+                let right = node.right.take();
                 drop(node);
                 if left.is_none() || right.is_none() {
                     return left.or(right);
@@ -67,9 +67,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

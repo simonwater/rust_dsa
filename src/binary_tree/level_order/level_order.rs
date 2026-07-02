@@ -4,7 +4,7 @@ use std::collections::VecDeque;
 use std::rc::Rc;
 
 /// [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn level_order(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {

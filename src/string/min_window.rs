@@ -1,5 +1,5 @@
 /// [76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     // 对比两个哈希中的每一项来判断是否覆盖

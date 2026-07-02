@@ -1,5 +1,5 @@
 /// [852. 山脉数组的峰顶索引](https://leetcode.cn/problems/peak-index-in-a-mountain-array/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn peak_index_in_mountain_array(arr: Vec<i32>) -> i32 {
@@ -23,7 +23,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     pub fn peak_index_in_mountain_array(arr: Vec<i32>) -> i32 {
@@ -43,7 +43,7 @@ impl Solution2 {
     }
 }
 
-struct Solution3;
+pub struct Solution3;
 
 impl Solution3 {
     pub fn peak_index_in_mountain_array(arr: Vec<i32>) -> i32 {
@@ -65,8 +65,6 @@ impl Solution3 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

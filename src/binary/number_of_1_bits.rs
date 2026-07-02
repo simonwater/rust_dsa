@@ -1,5 +1,5 @@
 /// [191. 位1的个数](https://leetcode.cn/problems/number-of-1-bits/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn hamming_weight(mut n: i32) -> i32 {

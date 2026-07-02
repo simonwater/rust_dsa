@@ -5,10 +5,10 @@ use std::rc::Rc;
 /// [114. 二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/)
 
 // 1. 前序遍历
-struct Solution;
+pub struct Solution;
 impl Solution {
     pub fn flatten(root: &mut Option<Rc<RefCell<TreeNode>>>) {
-        let mut dummy = Rc::new(RefCell::new(TreeNode::new(0)));
+        let dummy = Rc::new(RefCell::new(TreeNode::new(0)));
         let mut prev = dummy.clone();
         Self::dfs(root.take(), &mut prev);
         *root = dummy.borrow_mut().right.take();
@@ -29,7 +29,7 @@ impl Solution {
 }
 
 // 逆前序遍历
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn flatten(root: &mut Option<Rc<RefCell<TreeNode>>>) {
         let mut ans: Option<Rc<RefCell<TreeNode>>> = None;
@@ -53,7 +53,7 @@ impl Solution2 {
 }
 
 // 前序遍历迭代法
-struct Solution3;
+pub struct Solution3;
 impl Solution3 {
     pub fn flatten(root: &mut Option<Rc<RefCell<TreeNode>>>) {
         if root.is_none() {
@@ -114,7 +114,7 @@ impl Solution3 {
 ///         break;
 ///     }
 /// }
-struct Solution4;
+pub struct Solution4;
 impl Solution4 {
     pub fn flatten(root: &mut Option<Rc<RefCell<TreeNode>>>) {
         if root.is_none() {
@@ -141,9 +141,6 @@ impl Solution4 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

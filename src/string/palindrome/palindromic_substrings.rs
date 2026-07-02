@@ -1,5 +1,5 @@
 /// [647. 回文子串](https://leetcode.cn/problems/palindromic-substrings/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     /// 中心扩散法
@@ -22,7 +22,7 @@ impl Solution {
 
     fn calc(s_bytes: &[u8], mut i: usize, mut j: usize) -> i32 {
         let mut cnt = 0;
-        while i >= 0 && j < s_bytes.len() {
+        while j < s_bytes.len() {
             if s_bytes[i] == s_bytes[j] {
                 cnt += 1;
                 if i == 0 {
@@ -38,7 +38,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 /// 动态规划
 impl Solution2 {
     pub fn count_substrings(s: String) -> i32 {
@@ -66,8 +66,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

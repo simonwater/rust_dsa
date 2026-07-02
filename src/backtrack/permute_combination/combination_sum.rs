@@ -2,7 +2,7 @@
 /// 输入数字无重复、每个数可重复选
 
 /// 从给定数组的视角，从头到尾做：选/不选 两个决策
-struct Solution1;
+pub struct Solution1;
 impl Solution1 {
     pub fn combination_sum(mut candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         let mut path = Vec::new();
@@ -35,7 +35,7 @@ impl Solution1 {
 }
 
 /// 从最终答案的视角，每一个位置都枚举所有可能的数据
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn combination_sum(mut candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         let mut path = Vec::new();

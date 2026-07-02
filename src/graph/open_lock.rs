@@ -1,7 +1,7 @@
 /// # [752. 打开转盘锁](https://leetcode.cn/problems/open-the-lock/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 use std::collections::VecDeque;
 impl Solution {
@@ -57,8 +57,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

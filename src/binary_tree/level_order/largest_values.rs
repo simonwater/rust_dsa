@@ -4,7 +4,7 @@ use std::collections::VecDeque;
 use std::rc::Rc;
 
 /// [515. 在每个树行中找最大值](https://leetcode.cn/problems/find-largest-value-in-each-tree-row/)
-struct Solution1;
+pub struct Solution1;
 
 impl Solution1 {
     pub fn largest_values(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
@@ -38,7 +38,7 @@ impl Solution1 {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     pub fn largest_values(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {

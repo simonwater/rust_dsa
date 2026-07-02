@@ -1,5 +1,5 @@
 /// [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/)
-struct Solution;
+pub struct Solution;
 
 use std::collections::HashMap;
 impl Solution {
@@ -20,8 +20,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

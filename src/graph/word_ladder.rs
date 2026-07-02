@@ -1,7 +1,7 @@
 /// # [127. 单词接龙](https://leetcode.cn/problems/word-ladder/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 use core::str;
 use std::collections::HashSet;
@@ -51,8 +51,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

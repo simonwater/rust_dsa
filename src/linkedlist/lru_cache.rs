@@ -1,13 +1,13 @@
 /// [146. LRU 缓存](https://leetcode.cn/problems/lru-cache/description/)
 use std::collections::HashMap;
 
-struct LRUCache {
+pub struct LRUCache {
     capacity: usize,
     map: HashMap<i32, usize>,
     nodes: Vec<Node>,
 }
 
-struct Node {
+pub struct Node {
     key: i32,
     value: i32,
     prev: usize,

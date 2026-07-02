@@ -2,7 +2,7 @@
 /// 等价于一组不同的数字，每个数字可重复选择，求能构成目标值的最少数字个数
 /// 完全背包求组合，同322. 零钱兑换
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -34,7 +34,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     //
@@ -56,8 +56,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

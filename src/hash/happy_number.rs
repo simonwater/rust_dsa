@@ -1,10 +1,10 @@
 /// [202. 快乐数](https://leetcode.cn/problems/happy-number)
-struct Solution;
+pub struct Solution;
 
 use std::collections::HashSet;
 impl Solution {
     /// 哈希表记录已经处理过的数
-    pub fn is_happy(mut n: i32) -> bool {
+    pub fn is_happy(n: i32) -> bool {
         let mut n = n as usize;
         let mut set = HashSet::new();
         while n != 1 && !set.contains(&n) {

@@ -1,5 +1,5 @@
 /// [97. 交错字符串](https://leetcode.cn/problems/interleaving-string/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_interleave(s1: String, s2: String, s3: String) -> bool {

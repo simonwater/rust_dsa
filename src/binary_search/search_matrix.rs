@@ -1,5 +1,5 @@
 /// [74. 搜索二维矩阵](https://leetcode.cn/problems/search-a-2d-matrix/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {
@@ -29,8 +29,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

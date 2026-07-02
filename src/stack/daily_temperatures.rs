@@ -1,5 +1,5 @@
 /// [739. 每日温度](https://leetcode.cn/problems/daily-temperatures/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn daily_temperatures(temperatures: Vec<i32>) -> Vec<i32> {
@@ -24,8 +24,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

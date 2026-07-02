@@ -1,7 +1,7 @@
 /// # [152. 乘积最大子数组](https://leetcode.cn/problems/maximum-product-subarray/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -22,8 +22,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

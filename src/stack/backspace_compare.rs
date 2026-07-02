@@ -1,7 +1,7 @@
 /// [844. 比较含退格的字符串](https://leetcode.cn/problems/backspace-string-compare/description/)
 
 // 栈
-struct Solution;
+pub struct Solution;
 impl Solution {
     pub fn backspace_compare(s: String, t: String) -> bool {
         let s_result = Self::clean_datas(s.as_bytes());
@@ -23,7 +23,7 @@ impl Solution {
 }
 
 // 双指针逆向扫描
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn backspace_compare(s: String, t: String) -> bool {
         let s_bytes = s.as_bytes();
@@ -70,8 +70,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

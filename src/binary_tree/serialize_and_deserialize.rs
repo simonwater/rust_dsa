@@ -3,14 +3,14 @@ use crate::binary_tree::TreeNode;
 use std::cell::RefCell;
 use std::fmt::Write;
 use std::rc::Rc;
-struct Codec {}
+pub struct Codec {}
 
 impl Codec {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self {}
     }
 
-    fn serialize(&self, root: Option<Rc<RefCell<TreeNode>>>) -> String {
+    pub fn serialize(&self, root: Option<Rc<RefCell<TreeNode>>>) -> String {
         let mut ans = String::with_capacity(256);
         Self::serialize_inner(&root, &mut ans);
         ans
@@ -31,7 +31,7 @@ impl Codec {
         }
     }
 
-    fn deserialize(&self, data: String) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn deserialize(&self, data: String) -> Option<Rc<RefCell<TreeNode>>> {
         Self::deserialize_inner(data.as_bytes(), &mut 0)
     }
 

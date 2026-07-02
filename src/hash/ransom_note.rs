@@ -1,5 +1,5 @@
 /// [383. 赎金信](https://leetcode.cn/problems/ransom-note/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn can_construct1(ransom_note: String, magazine: String) -> bool {

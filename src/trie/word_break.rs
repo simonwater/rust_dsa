@@ -1,5 +1,5 @@
 /// [139. 单词拆分](https://leetcode.cn/problems/word-break/)
-struct Solution;
+pub struct Solution;
 use std::collections::HashSet;
 impl Solution {
     pub fn word_break(s: String, word_dict: Vec<String>) -> bool {
@@ -20,7 +20,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 use crate::trie::Trie;
 impl Solution2 {
     pub fn word_break(s: String, word_dict: Vec<String>) -> bool {
@@ -46,8 +46,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

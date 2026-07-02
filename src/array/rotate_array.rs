@@ -1,8 +1,8 @@
 /// [189. 轮转数组](https://leetcode.cn/problems/rotate-array/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
-    pub fn rotate(nums: &mut Vec<i32>, mut k: i32) {
+    pub fn rotate(nums: &mut Vec<i32>, k: i32) {
         let mut k = k as usize;
         let n = nums.len();
         if n <= 1 || k % n == 0 {
@@ -23,10 +23,10 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
-    pub fn rotate(nums: &mut Vec<i32>, mut k: i32) {
+    pub fn rotate(nums: &mut Vec<i32>, k: i32) {
         let mut k = k as usize;
         let n = nums.len();
         if n <= 1 || k % n == 0 {
@@ -41,8 +41,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

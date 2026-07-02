@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn lowest_common_ancestor(

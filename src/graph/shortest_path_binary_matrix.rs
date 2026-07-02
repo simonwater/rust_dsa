@@ -1,5 +1,5 @@
 /// [1091. 二进制矩阵中的最短路径](https://leetcode.cn/problems/shortest-path-in-binary-matrix/)
-struct Solution;
+pub struct Solution;
 
 use std::collections::VecDeque;
 
@@ -55,8 +55,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

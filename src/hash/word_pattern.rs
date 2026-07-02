@@ -1,5 +1,5 @@
 /// [290. 单词规律](https://leetcode.cn/problems/word-pattern/)
-struct Solution;
+pub struct Solution;
 
 use std::collections::HashMap;
 impl Solution {

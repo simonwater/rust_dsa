@@ -1,5 +1,5 @@
 /// [216. 组合总和 III](https://leetcode.cn/problems/combination-sum-iii/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -29,7 +29,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     //
@@ -60,8 +60,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

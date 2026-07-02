@@ -1,7 +1,5 @@
-use crate::stack;
-
 /// [735. 小行星碰撞](https://leetcode.cn/problems/asteroid-collision/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn asteroid_collision(asteroids: Vec<i32>) -> Vec<i32> {
@@ -39,8 +37,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

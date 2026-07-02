@@ -1,5 +1,5 @@
 /// [72. 编辑距离](https://leetcode.cn/problems/edit-distance/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn min_distance(s1: String, s2: String) -> i32 {

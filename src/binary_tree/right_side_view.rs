@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [199. 二叉树的右视图](https://leetcode.cn/problems/binary-tree-right-side-view/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn right_side_view(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
@@ -26,9 +26,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

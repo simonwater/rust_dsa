@@ -1,5 +1,5 @@
 /// [128. 最长连续序列](https://leetcode.cn/problems/longest-consecutive-sequence/)
-struct Solution;
+pub struct Solution;
 
 use std::collections::HashSet;
 impl Solution {
@@ -7,7 +7,7 @@ impl Solution {
         if nums.len() <= 1 {
             return nums.len() as i32;
         }
-        let mut set = nums.into_iter().collect::<HashSet<i32>>();
+        let set = nums.into_iter().collect::<HashSet<i32>>();
         let mut ans = 1;
         for &num in set.iter() {
             if set.contains(&(num - 1)) {
@@ -29,8 +29,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

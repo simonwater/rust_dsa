@@ -1,5 +1,5 @@
 /// [278. 第一个错误的版本](https://leetcode.cn/problems/first-bad-version/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn first_bad_version(&self, n: i32) -> i32 {
@@ -8,7 +8,7 @@ impl Solution {
         let mut ans = n;
         while lo <= hi {
             let mid = lo + ((hi - lo) >> 1);
-            if self.isBadVersion(mid) {
+            if self.is_bad_version(mid) {
                 ans = mid;
                 hi = mid - 1;
             } else {
@@ -18,15 +18,13 @@ impl Solution {
         ans
     }
 
-    fn isBadVersion(&self, version: i32) -> bool {
+    fn is_bad_version(&self, _version: i32) -> bool {
         unimplemented!()
     }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

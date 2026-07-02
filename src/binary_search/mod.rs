@@ -1,7 +1,7 @@
-pub mod LIS;
 pub mod find_peak_element;
 pub mod first_bad_version;
 pub mod k_closest_elements;
+pub mod longest_increasing_subsequence;
 pub mod mountain_array;
 pub mod my_sqrt;
 pub mod random_pick_with_weight;

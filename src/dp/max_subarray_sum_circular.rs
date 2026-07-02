@@ -2,7 +2,7 @@
 /// 最大子数组和与最小子数组和的结合，需要特殊判断全负的情况
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //

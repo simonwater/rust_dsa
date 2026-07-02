@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::collections::HashMap;
 use std::rc::Rc;
 
-struct Solution;
+pub struct Solution;
 
 /// [112. 路径总和](https://leetcode.cn/problems/path-sum/description/)
 impl Solution {

@@ -1,5 +1,5 @@
 /// [120. 三角形最小路径和](https://leetcode.cn/problems/triangle/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn minimum_total(triangle: Vec<Vec<i32>>) -> i32 {

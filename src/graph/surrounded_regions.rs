@@ -1,5 +1,5 @@
 /// [130. 被围绕的区域](https://leetcode.cn/problems/surrounded-regions/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn solve(board: &mut Vec<Vec<char>>) {
@@ -42,8 +42,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

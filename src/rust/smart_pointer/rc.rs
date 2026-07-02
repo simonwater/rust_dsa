@@ -1,15 +1,15 @@
 use std::rc::Rc;
-struct ListNode {
-    val: i32,
-    next: Option<Rc<ListNode>>,
+pub struct ListNode {
+    pub val: i32,
+    pub next: Option<Rc<ListNode>>,
 }
 
-enum List {
+pub enum List {
     Cons(i32, Rc<List>),
     Nil,
 }
 
-struct Data {
+pub struct Data {
     pub val: i32,
 }
 
@@ -34,11 +34,11 @@ mod tests {
             })),
         }));
 
-        let b = Some(Rc::new(ListNode {
+        let _b = Some(Rc::new(ListNode {
             val: 3,
             next: a.clone(),
         }));
-        let c = Some(Rc::new(ListNode {
+        let _c = Some(Rc::new(ListNode {
             val: 4,
             next: a.clone(),
         }));
@@ -47,8 +47,8 @@ mod tests {
     #[test]
     fn test2() {
         let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
-        let b = Cons(3, a.clone());
-        let c = Cons(4, a.clone());
+        let _b = Cons(3, a.clone());
+        let _c = Cons(4, a.clone());
     }
 
     #[test]
@@ -56,11 +56,11 @@ mod tests {
         let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
         println!("count after creating a = {}", Rc::strong_count(&a)); // 1
 
-        let b = Cons(3, a.clone());
+        let _b = Cons(3, a.clone());
         println!("count after creating b = {}", Rc::strong_count(&a)); // 2
 
         {
-            let c = Cons(4, a.clone());
+            let _c = Cons(4, a.clone());
             println!("count after creating c = {}", Rc::strong_count(&a)); // 3
         }
 
@@ -73,8 +73,8 @@ mod tests {
     #[test]
     fn test4() {
         let a = Rc::new(Data { val: 1 });
-        let b = a.clone();
-        let c = a.clone();
+        let _b = a.clone();
+        let _c = a.clone();
         // wrong!
         // b.val = 1;
         // c.val = 2;

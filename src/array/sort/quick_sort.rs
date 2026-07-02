@@ -1,4 +1,4 @@
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     // 快速排序

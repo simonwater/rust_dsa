@@ -1,5 +1,5 @@
 /// [785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/)
-struct Solution;
+pub struct Solution;
 
 use std::collections::VecDeque;
 impl Solution {
@@ -37,8 +37,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

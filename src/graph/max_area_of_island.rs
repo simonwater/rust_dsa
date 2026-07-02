@@ -1,5 +1,5 @@
 /// [695. 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn max_area_of_island(mut grid: Vec<Vec<i32>>) -> i32 {
@@ -34,7 +34,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 use std::collections::VecDeque;
 impl Solution2 {
     pub fn max_area_of_island(mut grid: Vec<Vec<i32>>) -> i32 {
@@ -78,8 +78,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

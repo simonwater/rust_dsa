@@ -1,5 +1,5 @@
 /// [424. 替换后的最长重复字符](https://leetcode.cn/problems/longest-repeating-character-replacement/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn character_replacement(s: String, k: i32) -> i32 {
@@ -40,8 +40,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

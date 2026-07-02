@@ -1,5 +1,5 @@
 /// [525. 连续数组](https://leetcode.cn/problems/contiguous-array/)
-struct Solution;
+pub struct Solution;
 
 use std::collections::HashMap;
 impl Solution {
@@ -20,8 +20,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

@@ -1,5 +1,5 @@
 /// [310. 最小高度树](https://leetcode.cn/problems/minimum-height-trees/)
-struct Solution;
+pub struct Solution;
 use std::collections::VecDeque;
 struct Edge {
     pub to: usize,
@@ -68,8 +68,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

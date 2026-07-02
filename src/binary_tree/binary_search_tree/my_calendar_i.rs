@@ -1,6 +1,6 @@
 use std::{cell::RefCell, rc::Rc};
 
-struct Node {
+pub struct Node {
     pub start_time: i32,
     pub end_time: i32,
     pub left: Option<Rc<RefCell<Node>>>,
@@ -8,7 +8,7 @@ struct Node {
 }
 
 impl Node {
-    fn new(start_time: i32, end_time: i32) -> Self {
+    pub fn new(start_time: i32, end_time: i32) -> Self {
         Self {
             start_time,
             end_time,
@@ -19,16 +19,16 @@ impl Node {
 }
 
 // 递归
-struct MyCalendar {
+pub struct MyCalendar {
     node: Option<Rc<RefCell<Node>>>,
 }
 
 impl MyCalendar {
-    fn new() -> Self {
+    pub fn new() -> Self {
         MyCalendar { node: None }
     }
 
-    fn book(&mut self, start_time: i32, end_time: i32) -> bool {
+    pub fn book(&mut self, start_time: i32, end_time: i32) -> bool {
         if let Some(root) = self.node.as_ref() {
             Self::dfs(Rc::clone(root), start_time, end_time)
         } else {
@@ -72,16 +72,16 @@ impl MyCalendar {
 }
 
 // 迭代
-struct MyCalendar2 {
+pub struct MyCalendar2 {
     node: Option<Rc<RefCell<Node>>>,
 }
 
 impl MyCalendar2 {
-    fn new() -> Self {
+    pub fn new() -> Self {
         MyCalendar2 { node: None }
     }
 
-    fn book(&mut self, start_time: i32, end_time: i32) -> bool {
+    pub fn book(&mut self, start_time: i32, end_time: i32) -> bool {
         if let Some(root) = self.node.as_ref() {
             let mut visitor = Rc::clone(root);
             loop {

@@ -1,5 +1,5 @@
 /// [46. 全排列](https://leetcode.cn/problems/permutations/)
-struct Solution;
+pub struct Solution;
 
 /// 枚举每个位置的所有可能填充数字
 impl Solution {
@@ -28,7 +28,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 /// 用标志位判断是否已经用过，节约空间
 impl Solution2 {
@@ -55,7 +55,7 @@ impl Solution2 {
 }
 
 /// 原地交换法，通过交换来枚举每个位置所有可能的数字
-struct Solution3;
+pub struct Solution3;
 impl Solution3 {
     pub fn permute(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut ans = Vec::with_capacity(10);
@@ -80,8 +80,6 @@ impl Solution3 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

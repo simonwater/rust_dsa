@@ -9,7 +9,7 @@
 /// “外层跑金额，内层跑数字”：站在金额 i 的槽位上，横向让所有的数字全部过来汇报。
 /// 代表我们允许任何一个数字（比如 num）作为这组排列的“最后一个收尾数字”
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     // [70. 爬楼梯] 问题的扩展，爬楼梯相当于nums是[1, 2]
@@ -33,8 +33,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

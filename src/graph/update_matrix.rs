@@ -3,7 +3,7 @@
 use std::collections::VecDeque;
 
 /// 正向搜索，时间复杂度O(M^2*N^2)
-struct Solution;
+pub struct Solution;
 impl Solution {
     pub fn update_matrix(mat: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         let m = mat.len();
@@ -49,15 +49,15 @@ impl Solution {
 
 /// 反向从0开始查找，所有0全部入队列，在搜索图中处于同一层，然后从这一层扩散到整个图，遇到1时进行松弛操作。
 /// 时间复杂度O(M*N)
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn update_matrix(mat: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         let (m, n) = (mat.len(), mat[0].len());
         let mut ans = vec![vec![0; n]; m];
         let mut q = VecDeque::new();
         for (r, row) in mat.iter().enumerate() {
-            for (c, val) in row.iter().enumerate() {
-                if mat[r][c] == 0 {
+            for (c, &val) in row.iter().enumerate() {
+                if val == 0 {
                     q.push_back((r as i32, c as i32, 0));
                 } else {
                     ans[r][c] = i32::MAX;
@@ -86,8 +86,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

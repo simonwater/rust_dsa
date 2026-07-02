@@ -1,7 +1,7 @@
 /// # [91. 解码方法](https://leetcode.cn/problems/decode-ways/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -34,8 +34,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

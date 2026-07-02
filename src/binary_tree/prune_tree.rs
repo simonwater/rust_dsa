@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [814. 二叉树剪枝](https://leetcode.cn/problems/binary-tree-pruning/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn prune_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {

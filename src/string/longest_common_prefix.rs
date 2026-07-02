@@ -1,5 +1,5 @@
 /// [14. 最长公共前缀](https://leetcode.cn/problems/longest-common-prefix/)
-struct Solution;
+pub struct Solution;
 
 // 原地切片上判断，只在返回时进行一次堆分配，相比定义一个结果字符串，每次往里push字符性能要高。
 impl Solution {

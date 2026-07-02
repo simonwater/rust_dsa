@@ -1,10 +1,9 @@
 use crate::binary_tree::TreeNode;
-use core::borrow;
 use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [101. 对称二叉树](https://leetcode.cn/problems/symmetric-tree/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_symmetric(root: Option<Rc<RefCell<TreeNode>>>) -> bool {

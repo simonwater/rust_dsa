@@ -1,5 +1,5 @@
 /// [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
-struct Solution;
+pub struct Solution;
 /// 动态规划
 impl Solution {
     pub fn max_sub_array(nums: Vec<i32>) -> i32 {
@@ -14,7 +14,7 @@ impl Solution {
 }
 
 /// 前缀和。理论上性能不如动态规划，因为循环内部逻辑间有数据指令的依赖关系，无法利用CPU的并行预取
-struct Solution2;
+pub struct Solution2;
 impl Solution2 {
     pub fn max_sub_array(nums: Vec<i32>) -> i32 {
         let mut ans = nums[0];
@@ -31,8 +31,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

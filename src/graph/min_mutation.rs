@@ -1,8 +1,7 @@
-
 /// # [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation/)
 ///
 /// 所有权流转 + 零拷贝 + 就地take
-struct Solution;
+pub struct Solution;
 
 use std::collections::{HashSet, VecDeque};
 impl Solution {
@@ -44,8 +43,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

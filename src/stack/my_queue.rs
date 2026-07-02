@@ -1,22 +1,22 @@
 /// [232. 用栈实现队列](https://leetcode.cn/problems/implement-queue-using-stacks/description/)
-struct MyQueue {
+pub struct MyQueue {
     stack1: Vec<i32>,
     stack2: Vec<i32>,
 }
 
 impl MyQueue {
-    fn new() -> Self {
+    pub fn new() -> Self {
         MyQueue {
             stack1: Vec::new(),
             stack2: Vec::new(),
         }
     }
 
-    fn push(&mut self, x: i32) {
+    pub fn push(&mut self, x: i32) {
         self.stack1.push(x);
     }
 
-    fn pop(&mut self) -> i32 {
+    pub fn pop(&mut self) -> i32 {
         if self.empty() {
             return -1;
         }
@@ -29,7 +29,7 @@ impl MyQueue {
     }
 
     /// 此方法实现有两种选择：1.执行栈数据迁移，减轻pop的压力。2.保持不可变
-    fn peek(&self) -> i32 {
+    pub fn peek(&self) -> i32 {
         if self.empty() {
             return -1;
         }
@@ -40,7 +40,7 @@ impl MyQueue {
         }
     }
 
-    fn empty(&self) -> bool {
+    pub fn empty(&self) -> bool {
         self.stack1.is_empty() && self.stack2.is_empty()
     }
 }

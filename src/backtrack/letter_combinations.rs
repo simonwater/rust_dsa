@@ -1,5 +1,5 @@
 /// [17. 电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/)
-struct Solution;
+pub struct Solution;
 
 /// rust中char类型大小固定4字节，String底层必须是utf8编码，所以这种方式往string中push char时，
 /// 4 字节的 char，会重新编码（Encode）成对应的 UTF-8 字节，再塞进 String 的底层缓冲区，
@@ -46,7 +46,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 /// 常量定义方式： 相比方案一，此处常量最后内联到代码中时只是一个指针，但会多一次寻址，适合数据多的情况
 const MAP: &[&[u8]] = &[
@@ -93,8 +93,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

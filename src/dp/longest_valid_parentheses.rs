@@ -1,7 +1,7 @@
 /// # [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
 ///
 
-struct Solution;
+pub struct Solution;
 impl Solution {
     pub fn longest_valid_parentheses(s: String) -> i32 {
         let n = s.len();
@@ -32,8 +32,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

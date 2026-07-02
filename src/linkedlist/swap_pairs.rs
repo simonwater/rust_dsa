@@ -1,6 +1,6 @@
 /// [24. 两两交换链表中的节点](https://leetcode.cn/problems/swap-nodes-in-pairs/description/)
 use crate::linkedlist::ListNode;
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {

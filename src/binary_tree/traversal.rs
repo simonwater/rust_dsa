@@ -5,7 +5,7 @@ use std::rc::Rc;
 /// [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
 /// [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/)
 /// [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/)
-struct Solution;
+pub struct Solution;
 
 /// 递归
 impl Solution {
@@ -55,7 +55,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 /// 迭代
 impl Solution2 {
@@ -124,9 +124,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

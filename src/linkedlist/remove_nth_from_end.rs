@@ -1,7 +1,7 @@
 /// [19. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/)
 use crate::linkedlist::ListNode;
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn remove_nth_from_end(head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {

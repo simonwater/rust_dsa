@@ -1,7 +1,7 @@
 /// # [198. 打家劫舍](https://leetcode.cn/problems/house-robber/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -27,8 +27,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

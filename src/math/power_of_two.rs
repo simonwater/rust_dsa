@@ -1,5 +1,5 @@
 /// [231. 2 的幂](https://leetcode.cn/problems/power-of-two/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn is_power_of_two(mut n: i32) -> bool {
@@ -18,7 +18,7 @@ impl Solution {
     }
 }
 
-struct Solution2;
+pub struct Solution2;
 
 impl Solution2 {
     pub fn is_power_of_two(n: i32) -> bool {
@@ -28,8 +28,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

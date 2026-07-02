@@ -3,7 +3,7 @@ use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [617. 合并二叉树](https://leetcode.cn/problems/merge-two-binary-trees/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn merge_trees(

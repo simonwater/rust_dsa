@@ -1,5 +1,5 @@
 /// [692. 前K个高频单词](https://leetcode.cn/problems/top-k-frequent-words/)
-struct Solution;
+pub struct Solution;
 
 use std::cmp::Ordering;
 use std::collections::{BinaryHeap, HashMap};

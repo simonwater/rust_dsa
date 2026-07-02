@@ -4,13 +4,13 @@ use std::collections::VecDeque;
 use std::rc::Rc;
 
 /// [919. 完全二叉树插入器](https://leetcode.cn/problems/complete-binary-tree-inserter/)
-struct CBTInserter {
+pub struct CBTInserter {
     root: Option<Rc<RefCell<TreeNode>>>,
     q: VecDeque<Rc<RefCell<TreeNode>>>,
 }
 
 impl CBTInserter {
-    fn new(root: Option<Rc<RefCell<TreeNode>>>) -> Self {
+    pub fn new(root: Option<Rc<RefCell<TreeNode>>>) -> Self {
         if root.is_none() {
             unreachable!();
         }
@@ -43,7 +43,7 @@ impl CBTInserter {
         Self { root, q }
     }
 
-    fn insert(&mut self, val: i32) -> i32 {
+    pub fn insert(&mut self, val: i32) -> i32 {
         let node_rc = Rc::new(RefCell::new(TreeNode::new(val)));
         self.q.push_back(Rc::clone(&node_rc));
         let parent_rc = self.q.front().unwrap();
@@ -61,7 +61,7 @@ impl CBTInserter {
         p_val
     }
 
-    fn get_root(&self) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn get_root(&self) -> Option<Rc<RefCell<TreeNode>>> {
         self.root.as_ref().map(Rc::clone)
     }
 }

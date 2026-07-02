@@ -1,9 +1,7 @@
-use std::ops::DerefMut;
-
 use crate::linkedlist::ListNode;
 
 /// [876. 链表的中间结点](https://leetcode.cn/problems/middle-of-the-linked-list/description/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn middle_node(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {

@@ -1,6 +1,6 @@
 use crate::linkedlist::ListNode;
 /// [725. 分隔链表](https://leetcode.cn/problems/split-linked-list-in-parts/)
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     // 把链表分为 k 组
@@ -41,8 +41,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

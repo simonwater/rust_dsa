@@ -1,18 +1,18 @@
 /// [981. 基于时间的键值存储](https://leetcode.cn/problems/time-based-key-value-store/)
 use std::collections::HashMap;
 
-struct TimeMap {
+pub struct TimeMap {
     values_map: HashMap<String, Vec<(i32, String)>>,
 }
 
 impl TimeMap {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             values_map: HashMap::with_capacity(128),
         }
     }
 
-    fn set(&mut self, key: String, value: String, timestamp: i32) {
+    pub fn set(&mut self, key: String, value: String, timestamp: i32) {
         // 动态数组的创建必须用闭包，换成or_insert的话每次调用都会进行创建
         self.values_map
             .entry(key)
@@ -20,7 +20,7 @@ impl TimeMap {
             .push((timestamp, value));
     }
 
-    fn get(&self, key: String, timestamp: i32) -> String {
+    pub fn get(&self, key: String, timestamp: i32) -> String {
         if let Some(values) = self.values_map.get(&key) {
             return Self::search_upper(values, timestamp);
         }

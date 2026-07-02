@@ -1,7 +1,7 @@
 /// [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
 
 /// dfs
-struct Solution;
+pub struct Solution;
 impl Solution {
     pub fn num_islands(mut grid: Vec<Vec<char>>) -> i32 {
         let mut ans = 0;
@@ -34,7 +34,7 @@ impl Solution {
 }
 
 /// bfs
-struct Solution2;
+pub struct Solution2;
 use std::collections::VecDeque;
 impl Solution2 {
     pub fn num_islands(mut grid: Vec<Vec<char>>) -> i32 {
@@ -74,8 +74,6 @@ impl Solution2 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

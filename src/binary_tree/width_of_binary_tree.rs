@@ -1,10 +1,9 @@
 use crate::binary_tree::TreeNode;
-use core::num;
 use std::cell::RefCell;
 use std::rc::Rc;
 
 /// [662. 二叉树最大宽度](https://leetcode.cn/problems/maximum-width-of-binary-tree/)
-struct Solution;
+pub struct Solution;
 
 // dfs
 impl Solution {
@@ -43,7 +42,7 @@ impl Solution {
 
 use std::collections::VecDeque;
 // bfs层序遍历
-struct Solution1;
+pub struct Solution1;
 impl Solution1 {
     pub fn width_of_binary_tree(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         if root.is_none() {
@@ -91,9 +90,6 @@ impl Solution1 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-    use crate::tree;
-
     #[test]
     fn test1() {}
 }

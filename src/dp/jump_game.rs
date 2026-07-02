@@ -1,7 +1,7 @@
 /// # [55. 跳跃游戏](https://leetcode.cn/problems/jump-game/)
 /// 是否能够跳到最后一个位置
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -22,7 +22,7 @@ impl Solution {
 
 /// # [45. 跳跃游戏 II](https://leetcode.cn/problems/jump-game-ii/description/)
 /// 跳到最后一个位置的最小步数
-struct SolutionII;
+pub struct SolutionII;
 
 impl SolutionII {
     // 遍历所有的起跳点（最后一个位置必然不是起跳点）
@@ -44,8 +44,6 @@ impl SolutionII {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }

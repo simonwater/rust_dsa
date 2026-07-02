@@ -1,7 +1,7 @@
 /// # [22. 括号生成](https://leetcode.cn/problems/generate-parentheses/)
 ///
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     //
@@ -32,8 +32,6 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     #[test]
     fn test1() {}
 }
